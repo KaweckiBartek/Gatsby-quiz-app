@@ -1,0 +1,79 @@
+@import './variables';
+@import './normalize';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font: normal normal normal 1rem $f-baseFontFamily;
+  overflow-x: hidden;
+  background-color: #fffbf6;
+  color: black;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  color: $c-black;
+  text-decoration: none;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.country-selector,
+.search-box,
+.main-title {
+  display: none !important;
+}
+
+.page-container {
+  margin: 0 auto;
+  max-width: $wrapper;
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+@media screen and (max-width: $break-high) {
+  .page-container {
+    max-width: $wrapper-high;
+  }
+}
+
+@media screen and (max-width: $break-laptop) {
+  .page-container {
+    max-width: $wrapper-laptop;
+  }
+}
+
+@media screen and (max-width: $break-mid) {
+  .page-container {
+    max-width: $wrapper-mid;
+  }
+}
