@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from '../heading/Header'
 import CategoryTile from './CategoryTile'
 import technology from '../../images/icons/technologia_ikona_.svg'
 import culture from '../../images/icons/kultura_ikona.svg'
@@ -13,30 +12,36 @@ const Categories = () => {
     {
       title: "TECHNOLOGIA",
       icon: technology,
+      url:"/technology"
     },
     {
       title: "KULTURA",
       icon: culture,
+      url: "/culture",
     },
     {
       title: "MOTORYZACJA",
       icon: automotive,
+      url: "/automotive",
     },
     {
       title: "PROGRAMOWANIE",
       icon: programing,
+      url: "/programming",
     },
     {
       title: "HISTORIA",
       icon: history,
+      url: "/history",
+
     },
   ]
 
   return (
     <div className="categories">
-      <Header text="10 PYTAŃ / 5 KATEGORII" />
       <div className="categories__box">
-        {categories.map((tile) => <CategoryTile title={tile.title} icon={ tile.icon} size="200px"/>)}
+        {categories.map((tile) =>
+          <CategoryTile title={tile.title} icon={tile.icon} size="200px" url={ tile.url }/>)}
       </div>
     </div>
   )

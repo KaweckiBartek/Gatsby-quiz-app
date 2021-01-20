@@ -19,6 +19,13 @@ module.exports = {
         name: `images`,
       },
     },
+    // {
+    //   resolve: 'gatsby-background-image',
+    //   options: {
+    //     // add your own characters to escape, replacing the default ':/'
+    //     specialChars: '/:',
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
