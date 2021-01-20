@@ -1,8 +1,9 @@
 import React from 'react'
+import QUIZ from '../../images/logo/quiz.png'
 
 const QUIZLogo = () => {
   return (
-    <h1 className="quiz__logo">QUIZ</h1>
+    <img src={QUIZ} className="quiz__logo" />
   )
 }
 

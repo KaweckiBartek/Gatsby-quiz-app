@@ -2,7 +2,9 @@ import React from 'react'
 import Header from '../../components/heading/Header'
 import Heading from '../../components/heading/Heading'
 import BackButton from "../../components/buttons/BackButton"
-import CategoryTile from '../../components/categories/CategoryTile'
+import CategoryChosen from '../../components/categories/CategoryChosen'
+import programing from '../../images/icons/programowanie_ikona.svg'
+import StartButton from '../../components/buttons/StartButton'
 
 const Programming = () => {
   return (
@@ -10,7 +12,8 @@ const Programming = () => {
       <Header />
       <BackButton />
       <Heading text="WYBRANA KATEGORIA:" />
-      <CategoryTile />
+      <CategoryChosen icon={programing} title="PROGRAMOWANIE" size="200px" />
+      <StartButton />
 
     </div>
   )

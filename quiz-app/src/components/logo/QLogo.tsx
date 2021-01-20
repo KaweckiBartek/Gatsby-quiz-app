@@ -1,8 +1,9 @@
 import React from 'react'
+import Q from '../../images/logo/Q.png'
 
 const QLogo = () => {
   return (
-    <h2 className="q__logo">Q</h2>
+    <img src={Q} className="q__logo" />
   )
 }
 
