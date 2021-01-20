@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="home">
       <Header />
-      <Heading text="10 PYTAŃ / 5 KATEGORII"/>
+      <Heading text="10 PYTAŃ / 5 KATEGORII" category="programming"/>
       <Categories />
     </div>
   )

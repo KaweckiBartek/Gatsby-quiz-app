@@ -6,14 +6,15 @@ import CategoryChosen from '../../components/categories/CategoryChosen'
 import programing from '../../images/icons/programowanie_ikona.svg'
 import StartButton from '../../components/buttons/StartButton'
 
+
 const Programming = () => {
   return (
     <div className="home">
       <Header />
       <BackButton />
-      <Heading text="WYBRANA KATEGORIA:" />
+      <Heading text="WYBRANA KATEGORIA:" category="programming"/>
       <CategoryChosen icon={programing} title="PROGRAMOWANIE" size="200px" />
-      <StartButton />
+      <StartButton  />
 
     </div>
   )

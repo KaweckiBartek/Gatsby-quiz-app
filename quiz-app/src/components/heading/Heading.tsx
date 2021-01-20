@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Header = ({text}) => {
+const Heading = ({text, category}) => {
   return (
-    <h3 className="heading__header">{ text }</h3>
+    <h3 className={`heading__header heading__${category}`}>{ text }</h3>
   )
 }
 
-export default Header
+export default Heading

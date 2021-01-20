@@ -2,5 +2,26 @@
   text-align: center;
   width: 50vw;
   padding: 15px 40px;
+  font-weight: 500;
+  
+}
+
+.heading__programming{
+  background: linear-gradient(to left, $c-backgroundDefault, #4b2161, $c-backgroundDefault)
+}
+
+.heading__history{
+  background: linear-gradient(to left, $c-backgroundDefault, #4b2161, $c-backgroundDefault)
+}
+
+.heading__technology{
+  background: linear-gradient(to left, $c-backgroundDefault, #4b2161, $c-backgroundDefault)
+}
+
+.heading__culture{
+  background: linear-gradient(to left, $c-backgroundDefault, #4b2161, $c-backgroundDefault)
+}
+
+.heading__automotive{
   background: linear-gradient(to left, $c-backgroundDefault, #4b2161, $c-backgroundDefault)
 }
