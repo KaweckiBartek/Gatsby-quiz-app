@@ -7,8 +7,10 @@ import '../styles/themes/default/theme.scss';
 
 export default function Home() {
   return <div className="home">
-    <QLogo />
-    <QUIZLogo />
+    <div className="home__header">
+      <QLogo />
+      <QUIZLogo />
+    </div>
     <Categories />
   </div>
 }

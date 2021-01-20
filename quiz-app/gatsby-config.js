@@ -11,6 +11,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-inline-svg`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,17 +19,6 @@ module.exports = {
         name: `images`,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `GatsbyJS`,
-    //     short_name: `GatsbyJS`,
-    //     start_url: `/`,
-    //     background_color: `#f7f0eb`,
-    //     theme_color: `#a2466c`,
-    //     display: `standalone`,
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
@@ -42,6 +32,14 @@ module.exports = {
       options: {
         precachePages: [`/about-us/`, `/projects/*`],
       },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
+      }
     },
   ],
 }
