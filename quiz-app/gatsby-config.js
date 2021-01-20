@@ -10,6 +10,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,14 +29,14 @@ module.exports = {
     //     display: `standalone`,
     //   },
     // },
-    // {
-    //   resolve: `gatsby-plugin-typescript`,
-    //   options: {
-    //     isTSX: true, // defaults to false
-    //     jsxPragma: `jsx`, // defaults to "React"
-    //     allExtensions: true, // defaults to false
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true, // defaults to false
+        jsxPragma: `jsx`, // defaults to "React"
+        allExtensions: true, // defaults to false
+      },
+    },
     {
       resolve: `gatsby-plugin-offline`,
       options: {
