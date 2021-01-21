@@ -1,9 +1,13 @@
 .score {
+  position: fixed;
+  transform: translate(-85%, 0);
+  left: 50%;
+  top: 50%;
   .heading__header__wrapper {
     position: relative;
     .heading__header {
       text-align: center;
-      width: 50vw;
+      width: 30vw;
       height: 55px;
       font-weight: 500;
       opacity: 0.7;
@@ -25,33 +29,38 @@
   }
 
   // .heading__history {
-    
+
   // }
 
   // .heading__technology {
-    
+
   // }
 
   // .heading__culture {
-    
+
   // }
 
   // .heading__automotive {
-    
+
   // }
 
-  .score__result{
-    width: 170px;
-    height: 170px;
-    border: 1px solid #d4d0d9;
+  .score__result {
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 27px;
+    right: -1%;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #d4d0d9;
     border-radius: 50%;
-    background: linear-gradient(to right, #271840, #522e7a,);
+    background: linear-gradient(to right, #271840, #522e7a);
     display: flex;
     justify-content: center;
     align-items: center;
-    .score__result__text{
+    .score__result__text {
       color: white;
-      font-size: 25px;
+      font-size: 40px;
+      font-weight: 400;
     }
   }
 }

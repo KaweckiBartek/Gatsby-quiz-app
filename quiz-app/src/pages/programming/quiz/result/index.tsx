@@ -17,8 +17,10 @@ const Result = (props) => {
       >
         <Header />
         <CategoryChosen icon={programing} title="PROGRAMOWANIE" size="200px" />
-        <Score category="programming"/>
+        <Score category="programming" />
+        <div className="result__button__margin">
         <StartButton text="POWTÓRZ QUIZ" url="/programming" />
+        </div>
         <OtherCategories currentCategorry="PROGRAMOWANIE"/>
       </BackgroundImage>
     </div>
