@@ -1,7 +1,7 @@
 import React from 'react'
 import QLogo from '../../components/logo/QLogo'
 import QUIZLogo from '../../components/logo/QUIZLogo'
-import CloseButton from '../../components/buttons/closeButton';
+import CloseButton from '../../components/buttons/CloseButton';
 
 
 const Header = () => {
