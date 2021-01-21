@@ -10,7 +10,7 @@ const Home = (props) => {
   return (
     <div className="home">
       <BackgroundImage
-        fluid={props.data.indexImage.childImageSharp.fluid}
+        fluid={props.data.homeImage.childImageSharp.fluid}
         className="full__page__background"
       >
         <Header />
@@ -25,7 +25,7 @@ export default Home
 
 export const homeQuery = graphql`
   query{
-    indexImage: file(relativePath: {eq: "backgrounds/programming/home.png"}) {
+    homeImage: file(relativePath: {eq: "backgrounds/programming/home.png"}) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4000) {
           base64
