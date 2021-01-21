@@ -13,7 +13,6 @@ const Home = (props) => {
         fluid={props.data.indexImage.childImageSharp.fluid}
         className="full__page__background"
       >
-
         <Header />
         <Heading text="10 PYTAŃ / 5 KATEGORII" category="programming" />
         <Categories />

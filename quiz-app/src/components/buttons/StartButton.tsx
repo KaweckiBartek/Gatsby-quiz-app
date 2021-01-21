@@ -1,16 +1,15 @@
-import { url } from 'inspector'
+import { Link } from 'gatsby'
 import React from 'react'
-import buttonProgramming from "../../images/icons/button_programowanie_01.svg"
-// import buttonHistory from "../../images/icons/button_programowanie_01.svg"
-// import buttonTechnology from "../../images/icons/button_programowanie_01.svg"
-// import buttonAutomotive from "../../images/icons/button_programowanie_01.svg"
-// import buttonCulture from "../../images/icons/button_programowanie_01.svg"
+import playIcon from '../../images/icons/button_strzałka_plus.svg'
 
-const StartButton = () => {
+const StartButton = ({ url }) => {
   return (
-    <div className="start__button">
-      <img src={buttonProgramming} alt="start-button"/>
-    </div>
+    <Link to={url}>
+      <div className="start__button">
+        <h4 className="start__text">ROZPOCZNIJ</h4>
+        <img className="start__icon" src={playIcon} alt="play-icon" />
+      </div>
+    </Link>
   )
 }
 
