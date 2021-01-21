@@ -1,17 +1,23 @@
 .categories {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100vw;
+  margin-top: 90px;
   align-items: center;
-  margin-top: 20px;
+  justify-content: center;
+}
 
-  &__box {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100vw;
-    margin-top: 60px;
-    align-items: center;
-    justify-content: center;
-  }
+.other__categories {
+  margin-top: 0;
+  position: fixed;
+  right: 11%;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
 }
 
 .category__tile {
@@ -32,9 +38,9 @@
     transform: scale(1.05);
   }
   &__icon {
-    width: 63px;
-    height: 63px;
-    margin: 30px 0;
+    width: 50%;
+    height: 50%;
+    margin: 10% 0;
   }
 
   &__border {

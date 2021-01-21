@@ -1,9 +1,12 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import Q from '../../images/logo/Q.png'
 
 const QLogo = () => {
   return (
-    <img src={Q} className="q__logo" />
+    <Link to="/">
+      <img src={Q} className="q__logo" />
+    </Link>
   )
 }
 

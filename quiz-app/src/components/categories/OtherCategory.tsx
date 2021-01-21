@@ -7,7 +7,7 @@ import programing from '../../images/icons/programowanie_ikona.svg'
 import history from '../../images/icons/historia_ikona.svg'
 
 
-const Categories = () => {
+const OtherCategories = ({currentCategorry}) => {
   const categories = [
     {
       title: "TECHNOLOGIA",
@@ -37,12 +37,14 @@ const Categories = () => {
     },
   ]
 
+  const otherCategories = categories.filter((el)=> el.title !== currentCategorry )
+  
   return (
-      <div className="categories">
-        {categories.map((tile) =>
-          <CategoryTile title={tile.title} icon={tile.icon} size="200px" url={ tile.url }/>)}
+    <div className="other__categories">
+        {otherCategories.map((tile) =>
+          <CategoryTile title={tile.title} icon={tile.icon} size="140px" url={ tile.url }/>)}
       </div>
   )
 }
 
-export default Categories
+export default OtherCategories

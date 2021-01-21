@@ -6,6 +6,7 @@ import Score from '../../../../components/score'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql } from "gatsby"
 import programing from '../../../../images/icons/programowanie_ikona.svg'
+import OtherCategories from '../../../../components/categories/OtherCategory'
 
 const Result = (props) => {
   return (
@@ -17,7 +18,8 @@ const Result = (props) => {
         <Header />
         <CategoryChosen icon={programing} title="PROGRAMOWANIE" size="200px" />
         <Score category="programming"/>
-        <StartButton text="POWTÓRZ QUIZ" url="/programming"/>
+        <StartButton text="POWTÓRZ QUIZ" url="/programming" />
+        <OtherCategories currentCategorry="PROGRAMOWANIE"/>
       </BackgroundImage>
     </div>
   )
