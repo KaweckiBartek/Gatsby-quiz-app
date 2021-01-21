@@ -15,7 +15,7 @@ const Home = (props) => {
       >
         <Header />
         <Heading text="10 PYTAŃ / 5 KATEGORII" category="programming" />
-        <Categories />
+        <Categories category="programming" />
       </BackgroundImage>
     </div>
   )

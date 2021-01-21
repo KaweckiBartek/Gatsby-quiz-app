@@ -7,7 +7,9 @@ import programing from '../../images/icons/programowanie_ikona.svg'
 import history from '../../images/icons/historia_ikona.svg'
 
 
-const Categories = () => {
+const Categories = ({ category }) => {
+  console.log(category);
+  
   const categories = [
     {
       title: "TECHNOLOGIA",
@@ -40,7 +42,7 @@ const Categories = () => {
   return (
       <div className="categories">
         {categories.map((tile) =>
-          <CategoryTile title={tile.title} icon={tile.icon} size="200px" url={ tile.url }/>)}
+          <CategoryTile title={tile.title} icon={tile.icon} size="200px" url={tile.url} category={ category }/>)}
       </div>
   )
 }

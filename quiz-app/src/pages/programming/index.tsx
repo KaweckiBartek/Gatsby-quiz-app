@@ -18,9 +18,9 @@ const Programming = (props) => {
       >
         <Header />
         <BackButton />
-        <Heading text="WYBRANA KATEGORIA:" category="programming" />
+        <Heading category="programming" text="WYBRANA KATEGORIA:" />
         <CategoryChosen icon={programing} title="PROGRAMOWANIE" size="200px" />
-        <StartButton url="/programming/quiz" text="ROZPOCZNIJ"/>
+        <StartButton category="programming" url="/programming/quiz" text="ROZPOCZNIJ"/>
       </BackgroundImage>
     </div>
   )

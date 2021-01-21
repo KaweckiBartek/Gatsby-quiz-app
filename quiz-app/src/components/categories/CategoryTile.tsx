@@ -1,11 +1,11 @@
 import React from 'react'
 import {Link} from "gatsby"
 
-const CategoryTile = ({ icon, title, size, url }) => {
+const CategoryTile = ({ icon, title, size, url, category }) => {
 
   return (
     <Link to={url} >
-      <div className="category__tile"
+      <div className={`category__tile category__tile__${category}`}
         style={{ width: size, height: size }}
       >
         <img className="category__tile__icon"

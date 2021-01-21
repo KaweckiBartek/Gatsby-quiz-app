@@ -6,10 +6,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #7153a7;
   border-radius: 15px;
-  background-image: linear-gradient(to left, #522f7b, #2b1845 65%);
+  transition: 0.5s;
 
+  &:hover{
+    transform: scale(1.05);
+  }
+
+  
   .start__icon{
     width: 65px;
   }
@@ -18,13 +22,49 @@
     color: white;
     font-weight: 400;
   }
-  transition: 0.5s;
-  &:hover{
-    transform: scale(1.05);
-    background: linear-gradient(to right, #b2368c, #2b1845);
-  }
 }
 
 .result__button__margin{
   margin-top: 200px;
 }
+
+.start__button__programming{
+  border: 1px solid #7153a7;
+  background-image: linear-gradient(to left, #522f7b, #2b1845 65%);
+  &:hover{
+    background: linear-gradient(to right, #b2368c, #2b1845);
+  }
+}
+
+.start__button__automotive{
+  border: 1px solid #7153a7;
+  background-image: linear-gradient(to left, #522f7b, #2b1845 65%);
+  &:hover{
+    background: linear-gradient(to right, #b2368c, #2b1845);
+  }
+}
+
+.start__button__history{
+  border: 1px solid #7153a7;
+  background: linear-gradient(45deg, rgba(11,11,11,1) 9%, rgba(101,88,79,1) 36%, rgba(101,88,79,1) 75%, #c1ad95 100%);
+  &:hover{
+    background: linear-gradient(90deg, rgba(197,176,151,1) 0%, rgba(84,72,66,1) 100%);
+  }
+}
+
+.start__button__culture{
+  border: 1px solid #7153a7;
+  background-image: linear-gradient(to left, #522f7b, #2b1845 65%);
+  &:hover{
+    background: linear-gradient(to right, #b2368c, #2b1845);
+  }
+}
+
+.start__button__technology{
+  border: 1px solid #7153a7;
+  background-image: linear-gradient(to left, #522f7b, #2b1845 65%);
+  &:hover{
+    background: linear-gradient(to right, #b2368c, #2b1845);
+  }
+}
+

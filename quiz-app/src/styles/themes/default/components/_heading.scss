@@ -25,19 +25,13 @@
 
 .heading__history {
   background: linear-gradient(
-    to left,
-    $c-backgroundDefault,
-    #4b2161,
-    $c-backgroundDefault
+    rgba(164,145,127,0.2),rgba(164,145,127,1),rgba(164,145,127,0.2)
   );
 }
 
 .heading__technology {
   background: linear-gradient(
-    to left,
-    $c-backgroundDefault,
-    #4b2161,
-    $c-backgroundDefault
+    rgba(164,145,127,0.2),rgba(164,145,127,1),rgba(164,145,127,0.2)
   );
 }
 

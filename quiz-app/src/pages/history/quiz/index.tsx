@@ -13,7 +13,7 @@ const Quiz = (props) => {
         className="full__page__background"
       >
         <Header />
-        <Heading text="WYBRANA KATEGORIA:" category="history" />
+        <Heading category="history" text="WYBRANA KATEGORIA:"  />
       </BackgroundImage>
     </div>
   )

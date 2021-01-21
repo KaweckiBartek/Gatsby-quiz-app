@@ -3,34 +3,34 @@ import Header from '../../components/heading/Header'
 import Heading from '../../components/heading/Heading'
 import BackButton from "../../components/buttons/BackButton"
 import CategoryChosen from '../../components/categories/CategoryChosen'
-import history from '../../images/icons/historia_ikona.svg'
+import automotive from '../../images/icons/motoryzacja_ikona.svg'
 import StartButton from '../../components/buttons/StartButton'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql } from "gatsby"
 
 
-const History = (props) => {
+const Automotive = (props) => {
   return (
     <div className="home">
       <BackgroundImage
-        fluid={props.data.historyImage.childImageSharp.fluid}
+        fluid={props.data.automotiveImage.childImageSharp.fluid}
         className="full__page__background"
       >
         <Header />
         <BackButton />
-        <Heading category="history" text="WYBRANA KATEGORIA:"/>
-        <CategoryChosen icon={history} title="HISTORIA" size="200px" />
-        <StartButton category="history" url="/history/quiz" text="ROZPOCZNIJ"/>
+        <Heading category="automotive" text="WYBRANA KATEGORIA:" />
+        <CategoryChosen icon={automotive} title="MOTORYZACJA" size="200px" />
+        <StartButton category="automotive" url="/automotive/quiz" text="ROZPOCZNIJ"/>
       </BackgroundImage>
     </div>
   )
 }
 
-export default History
+export default Automotive
 
-export const historyQuery = graphql`
+export const automotiveQuery = graphql`
   query{
-    historyImage: file(relativePath: {eq: "backgrounds/history/home.png"}) {
+    automotiveImage: file(relativePath: {eq: "backgrounds/moto/select.png"}) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4000) {
           base64
