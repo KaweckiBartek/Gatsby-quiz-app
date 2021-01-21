@@ -36,7 +36,7 @@
   }
 }
 
-.start__button__automotive{
+.start__button__technology{
   border: 1px solid #7153a7;
   background-image: linear-gradient(to left, #522f7b, #2b1845 65%);
   &:hover{
@@ -60,11 +60,11 @@
   }
 }
 
-.start__button__technology{
-  border: 1px solid #7153a7;
-  background-image: linear-gradient(to left, #522f7b, #2b1845 65%);
+.start__button__automotive{
+  border: 1px solid #b4b5c2;
+background: linear-gradient(41deg, rgba(13,16,59,1) 0%, rgba(21,18,83,1) 50%, rgba(26,25,111,1) 79%, rgba(18,76,229,1) 100%);
   &:hover{
-    background: linear-gradient(to right, #b2368c, #2b1845);
+    background: linear-gradient(90deg, rgba(16,87,255,1) 5%, rgba(52,64,171,1) 71%, rgba(29,22,102,1) 100%);
   }
 }
 

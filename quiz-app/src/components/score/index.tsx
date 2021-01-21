@@ -1,5 +1,4 @@
 import React from 'react'
-import Heading from '../heading/Heading'
 
 const Score = ({category}) => {
   return (
@@ -9,7 +8,7 @@ const Score = ({category}) => {
         </div>
         <h3 className="heading__header__text">TWÓJ WYNIK</h3>
       </div>
-      <div className="score__result">
+      <div className={`score__result score__result__${category}`}>
         <h2 className="score__result__text">10/10</h2>
       </div>
     </div>

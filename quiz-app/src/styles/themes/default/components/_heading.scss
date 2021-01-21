@@ -28,10 +28,8 @@
   );
 }
 
-.heading__technology {
-  background: linear-gradient(
-    rgba(164,145,127,0.2),rgba(164,145,127,1),rgba(164,145,127,0.2)
-  );
+.heading__automotive {
+  background: linear-gradient(90deg, rgba(19,18,78,0.5732668067226891) 0%, rgba(19,18,78,0.8365721288515406) 25%, rgba(19,18,78,0.8309698879551821) 75%, rgba(19,18,78,0.562062324929972) 100%);
 }
 
 .heading__culture {
@@ -43,7 +41,7 @@
   );
 }
 
-.heading__automotive {
+.heading__technology {
   background: linear-gradient(
     to left,
     $c-backgroundDefault,

@@ -30,7 +30,7 @@ export default Automotive
 
 export const automotiveQuery = graphql`
   query{
-    automotiveImage: file(relativePath: {eq: "backgrounds/moto/select.png"}) {
+    automotiveImage: file(relativePath: {eq: "backgrounds/moto/home.png"}) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4000) {
           base64
