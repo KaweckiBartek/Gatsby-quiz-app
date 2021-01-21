@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 
 
 const Quiz = (props) => {
+  const category = "programming"
   return (
     <div className="home">
       <BackgroundImage
@@ -13,7 +14,7 @@ const Quiz = (props) => {
         className="full__page__background"
       >
         <Header />
-        <Heading text="SELECT THE CORRECT ANSWER" category="programming" />
+        <Heading category={category} text="WYBRANA KATEGORIA:"  />
       </BackgroundImage>
     </div>
   )

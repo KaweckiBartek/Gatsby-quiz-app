@@ -1,4 +1,4 @@
-.start__button{
+.start__button {
   padding: 0 30px 0 40px;
   margin-top: 50px;
   width: 300px;
@@ -9,62 +9,95 @@
   border-radius: 15px;
   transition: 0.5s;
 
-  &:hover{
+  &:hover {
     transform: scale(1.05);
   }
 
-  
-  .start__icon{
+  .start__icon {
     width: 65px;
   }
 
-  .start__text{
+  .start__text {
     color: white;
     font-weight: 400;
   }
 }
 
-.result__button__margin{
+.result__button__margin {
   margin-top: 200px;
 }
 
-.start__button__programming{
+.start__button__programming {
   border: 1px solid #7153a7;
   background-image: linear-gradient(to left, #522f7b, #2b1845 65%);
-  &:hover{
+  &:hover {
     background: linear-gradient(to right, #b2368c, #2b1845);
   }
 }
 
-.start__button__technology{
-  border: 1px solid #7153a7;
-  background-image: linear-gradient(to left, #522f7b, #2b1845 65%);
-  &:hover{
-    background: linear-gradient(to right, #b2368c, #2b1845);
+.start__button__technology {
+  border: 1px solid #475396;
+  background: linear-gradient(
+    49deg,
+    rgba(12, 15, 52, 1) 0%,
+    rgba(36, 20, 69, 1) 18%,
+    rgba(69, 25, 90, 1) 43%,
+    rgba(114, 33, 121, 1) 78%,
+    rgba(145, 39, 142, 1) 100%
+  );
+
+  &:hover {
+    background: linear-gradient(
+      243deg,
+      rgba(36, 20, 69, 1) 18%,
+      rgba(69, 25, 90, 1) 43%,
+      rgba(114, 33, 121, 1) 78%,
+      rgba(145, 39, 142, 1) 100%
+    );
   }
 }
 
-.start__button__history{
+.start__button__history {
   border: 1px solid white;
-  background: linear-gradient(45deg, rgba(11,11,11,1) 9%, rgba(101,88,79,1) 36%, rgba(101,88,79,1) 75%, #c1ad95 100%);
-  &:hover{
-    background: linear-gradient(90deg, rgba(197,176,151,1) 0%, rgba(84,72,66,1) 100%);
+  background: linear-gradient(
+    45deg,
+    rgba(11, 11, 11, 1) 9%,
+    rgba(101, 88, 79, 1) 36%,
+    rgba(101, 88, 79, 1) 75%,
+    #c1ad95 100%
+  );
+  &:hover {
+    background: linear-gradient(
+      90deg,
+      rgba(197, 176, 151, 1) 0%,
+      rgba(84, 72, 66, 1) 100%
+    );
   }
 }
 
-.start__button__culture{
+.start__button__culture {
   border: 1px solid #7153a7;
   background-image: linear-gradient(to left, #522f7b, #2b1845 65%);
-  &:hover{
+  &:hover {
     background: linear-gradient(to right, #b2368c, #2b1845);
   }
 }
 
-.start__button__automotive{
+.start__button__automotive {
   border: 1px solid #b4b5c2;
-background: linear-gradient(41deg, rgba(13,16,59,1) 0%, rgba(21,18,83,1) 50%, rgba(26,25,111,1) 79%, rgba(18,76,229,1) 100%);
-  &:hover{
-    background: linear-gradient(90deg, rgba(16,87,255,1) 5%, rgba(52,64,171,1) 71%, rgba(29,22,102,1) 100%);
+  background: linear-gradient(
+    41deg,
+    rgba(13, 16, 59, 1) 0%,
+    rgba(21, 18, 83, 1) 50%,
+    rgba(26, 25, 111, 1) 79%,
+    rgba(18, 76, 229, 1) 100%
+  );
+  &:hover {
+    background: linear-gradient(
+      90deg,
+      rgba(16, 87, 255, 1) 5%,
+      rgba(52, 64, 171, 1) 71%,
+      rgba(29, 22, 102, 1) 100%
+    );
   }
 }
-

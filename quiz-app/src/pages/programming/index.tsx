@@ -10,6 +10,9 @@ import { graphql } from "gatsby"
 
 
 const Programming = (props) => {
+  const category = "programming"
+  const kategoria = "PROGRAMOWANIE"
+  
   return (
     <div className="home">
       <BackgroundImage
@@ -18,9 +21,9 @@ const Programming = (props) => {
       >
         <Header />
         <BackButton />
-        <Heading category="programming" text="WYBRANA KATEGORIA:" />
-        <CategoryChosen icon={programing} title="PROGRAMOWANIE" size="200px" />
-        <StartButton category="programming" url="/programming/quiz" text="ROZPOCZNIJ"/>
+        <Heading category={category} text="WYBRANA KATEGORIA:" />
+        <CategoryChosen icon={programing} title={kategoria} size="200px" />
+        <StartButton category={category} url={`/${category}/quiz`} text="ROZPOCZNIJ" />
       </BackgroundImage>
     </div>
   )
@@ -30,7 +33,7 @@ export default Programming
 
 export const programmingQuery = graphql`
   query{
-    programmingImage: file(relativePath: {eq: "backgrounds/programming/select.png"}) {
+    programmingImage: file(relativePath: {eq: "backgrounds/programming/home.png"}) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4000) {
           base64

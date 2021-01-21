@@ -9,6 +9,9 @@ import automotive from '../../../../images/icons/motoryzacja_ikona.svg'
 import OtherCategories from '../../../../components/categories/OtherCategory'
 
 const Result = (props) => {
+  const category = "automotive"
+  const kategoria = "MOTORYZACJA"
+
   return (
     <div className="home">
       <BackgroundImage
@@ -16,12 +19,12 @@ const Result = (props) => {
         className="full__page__background"
       >
         <Header />
-        <CategoryChosen icon={automotive} title="MOTORYZACJA" size="200px" />
-        <Score category="automotive" />
+        <CategoryChosen icon={automotive} title={kategoria} size="200px" />
+        <Score category={category} />
         <div className="result__button__margin">
-        <StartButton category="automotive" text="POWTÓRZ QUIZ" url="/automotive" />
+        <StartButton category={category} text="POWTÓRZ QUIZ" url={`/${category}`} />
         </div>
-        <OtherCategories category="automotive" currentCategory="MOTORYZACJA"/>
+        <OtherCategories category={category} currentCategory={ kategoria }/>
       </BackgroundImage>
     </div>
   )

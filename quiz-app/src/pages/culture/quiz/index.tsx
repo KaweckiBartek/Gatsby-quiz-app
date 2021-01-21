@@ -6,12 +6,12 @@ import { graphql } from "gatsby"
 
 
 const Quiz = (props) => {
-  const category = "automotive"
+  const category = "culture"
 
   return (
     <div className="home">
       <BackgroundImage
-        fluid={props.data.automotiveQuizImage.childImageSharp.fluid}
+        fluid={props.data.cultureSelect.childImageSharp.fluid}
         className="full__page__background"
       >
         <Header />
@@ -23,9 +23,9 @@ const Quiz = (props) => {
 
 export default Quiz
 
-export const automotiveQuery = graphql`
+export const cultureQuery = graphql`
   query{
-    automotiveQuizImage: file(relativePath: {eq: "backgrounds/moto/select.png"}) {
+    cultureSelect: file(relativePath: {eq: "backgrounds/art/select.png"}) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4000) {
           base64

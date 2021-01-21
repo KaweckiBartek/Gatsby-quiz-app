@@ -9,19 +9,22 @@ import programing from '../../../../images/icons/programowanie_ikona.svg'
 import OtherCategories from '../../../../components/categories/OtherCategory'
 
 const Result = (props) => {
+  const category = "programming"
+  const kategoria = "PROGRAMOWANIE"
+
   return (
     <div className="home">
       <BackgroundImage
-        fluid={props.data.quizResultImage.childImageSharp.fluid}
+        fluid={props.data.programmingQuizResultImage.childImageSharp.fluid}
         className="full__page__background"
       >
         <Header />
-        <CategoryChosen icon={programing} title="PROGRAMOWANIE" size="200px" />
-        <Score category="programming" />
+        <CategoryChosen icon={programing} title={kategoria} size="200px" />
+        <Score category={category} />
         <div className="result__button__margin">
-        <StartButton category="programming" text="POWTÓRZ QUIZ" url="/programming" />
+        <StartButton category={category} text="POWTÓRZ QUIZ" url={`/${category}`} />
         </div>
-        <OtherCategories category="programming" currentCategory="PROGRAMOWANIE"/>
+        <OtherCategories category={category} currentCategory={ kategoria }/>
       </BackgroundImage>
     </div>
   )
@@ -31,7 +34,7 @@ export default Result
 
 export const programmingQuery = graphql`
   query{
-    quizResultImage: file(relativePath: {eq: "backgrounds/programming/resuts.png"}) {
+    programmingQuizResultImage: file(relativePath: {eq: "backgrounds/programming/resuts.png"}) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4000) {
           base64
