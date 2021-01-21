@@ -8,10 +8,8 @@ import buttonProgramming from "../../images/icons/button_programowanie_01.svg"
 
 const StartButton = () => {
   return (
-    <div className="start__button"
-    // style={{backgroundImage: url(buttonProgramming)}}
-    >
-      
+    <div className="start__button">
+      <img src={buttonProgramming} alt="start-button"/>
     </div>
   )
 }

@@ -5,19 +5,42 @@ import BackButton from "../../components/buttons/BackButton"
 import CategoryChosen from '../../components/categories/CategoryChosen'
 import programing from '../../images/icons/programowanie_ikona.svg'
 import StartButton from '../../components/buttons/StartButton'
+import BackgroundImage from 'gatsby-background-image'
+import { graphql } from "gatsby"
 
 
-const Programming = () => {
+const Programming = (props) => {
   return (
     <div className="home">
-      <Header />
-      <BackButton />
-      <Heading text="WYBRANA KATEGORIA:" category="programming"/>
-      <CategoryChosen icon={programing} title="PROGRAMOWANIE" size="200px" />
-      <StartButton  />
-
+      <BackgroundImage
+        fluid={props.data.programmingImage.childImageSharp.fluid}
+        className="full__page__background"
+      >
+        <Header />
+        <BackButton />
+        <Heading text="WYBRANA KATEGORIA:" category="programming" />
+        <CategoryChosen icon={programing} title="PROGRAMOWANIE" size="200px" />
+        <StartButton />
+      </BackgroundImage>
     </div>
   )
 }
 
 export default Programming
+
+export const programmingQuery = graphql`
+  query{
+    programmingImage: file(relativePath: {eq: "backgrounds/programming/select.png"}) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 4000) {
+          base64
+          tracedSVG
+          srcWebp
+          srcSetWebp
+          originalImg
+          originalName
+        }
+      }
+    }
+  }
+`
