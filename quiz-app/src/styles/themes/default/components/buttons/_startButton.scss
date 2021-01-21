@@ -76,10 +76,11 @@
 }
 
 .start__button__culture {
-  border: 1px solid #7153a7;
-  background-image: linear-gradient(to left, #522f7b, #2b1845 65%);
+  border: 1px solid white;
+  background: linear-gradient(90deg, rgba(104,104,104,1) 0%, rgba(203,203,203,1) 100%);
+
   &:hover {
-    background: linear-gradient(to right, #b2368c, #2b1845);
+    background: linear-gradient(270deg, rgba(104,104,104,1) 0%, #f8f6fd 100%);
   }
 }
 

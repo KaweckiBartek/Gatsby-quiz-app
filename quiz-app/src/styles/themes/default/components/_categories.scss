@@ -74,12 +74,10 @@
 
 .category__tile__culture {
   border: 1px solid #8f6cd1;
-  background: linear-gradient(45deg, $c-backgroundDefault, #522f7b);
-  -webkit-box-shadow: 5px 5px 9px -2px #6c5399;
-  box-shadow: 5px 5px 9px -2px #6c5399;
+  background: linear-gradient(90deg, rgba(104,104,104,1) 0%, rgba(203,203,203,1) 100%);
 
   &:hover {
-    background: linear-gradient(45deg, #b2368c, #381f55);
+    background: linear-gradient(270deg, rgba(104,104,104,1) 0%, #f8f6fd 100%);
   }
 }
 

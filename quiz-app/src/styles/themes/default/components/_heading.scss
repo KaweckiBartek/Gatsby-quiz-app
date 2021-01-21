@@ -49,11 +49,13 @@
 }
 
 .heading__culture {
+  background: rgb(104, 104, 104);
   background: linear-gradient(
-    to left,
-    $c-backgroundDefault,
-    #4b2161,
-    $c-backgroundDefault
+    274deg,
+    rgba(104, 104, 104, 0.09987745098039214) 1%,
+    rgba(104, 104, 104, 0.7777485994397759) 40%,
+    rgba(104, 104, 104, 1) 65%,
+    rgba(104, 104, 104, 1) 100%
   );
 }
 
