@@ -8,13 +8,14 @@
   align-items: center;
   border: 1px solid #7153a7;
   border-radius: 15px;
-  background-image: linear-gradient(to left, #522f7b, #2b1845);
+  background-image: linear-gradient(to left, #522f7b, #2b1845 65%);
 
   .start__icon{
     width: 65px;
   }
 
   .start__text{
+    color: white;
     font-weight: 400;
   }
   transition: 0.5s;

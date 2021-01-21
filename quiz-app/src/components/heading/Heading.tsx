@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Heading = ({text, category}) => {
+const Heading = ({ text, category }) => {
   return (
-    <h3 className={`heading__header heading__${category}`}>{ text }</h3>
+    <div className="heading__header__wrapper">
+      <div className={`heading__header heading__${category}`}>
+      </div>
+      <h3 className="heading__header__text">{text}</h3>
+    </div>
   )
 }
 

@@ -1,0 +1,60 @@
+.heading__header__wrapper {
+  position: relative;
+  .heading__header {
+    text-align: center;
+    width: 50vw;
+    height: 55px;
+    font-weight: 500;
+    opacity: 0.7;
+  }
+
+  h3.heading__header__text {
+    opacity: 1 !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    font-weight: 400;
+  }
+}
+
+.heading__programming {
+  background: linear-gradient(to left, #271840, #4b2161, #271840);
+}
+
+.heading__history {
+  background: linear-gradient(
+    to left,
+    $c-backgroundDefault,
+    #4b2161,
+    $c-backgroundDefault
+  );
+}
+
+.heading__technology {
+  background: linear-gradient(
+    to left,
+    $c-backgroundDefault,
+    #4b2161,
+    $c-backgroundDefault
+  );
+}
+
+.heading__culture {
+  background: linear-gradient(
+    to left,
+    $c-backgroundDefault,
+    #4b2161,
+    $c-backgroundDefault
+  );
+}
+
+.heading__automotive {
+  background: linear-gradient(
+    to left,
+    $c-backgroundDefault,
+    #4b2161,
+    $c-backgroundDefault
+  );
+}
