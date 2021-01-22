@@ -1,12 +1,12 @@
 import React from 'react'
 
-const CategoryTile = ({ icon, title, size, }) => {
+const CategoryChosen = ({ icon, title, size, }) => {
 
   return (
       <div className="category__chosen"
         style={{ width: size, height: size }}
       >
-        <img className="category__tile__icon"
+        <img className="category__chosen__icon"
           src={icon}
           alt="icon" />
         <div>
@@ -17,4 +17,4 @@ const CategoryTile = ({ icon, title, size, }) => {
   )
 }
 
-export default CategoryTile
+export default CategoryChosen

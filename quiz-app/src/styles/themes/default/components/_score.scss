@@ -1,13 +1,14 @@
 .score {
-  position: fixed;
-  transform: translate(-85%, 0);
-  left: 50%;
+  transform: translate(-10vw, 0);
   top: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   .heading__header__wrapper {
     position: relative;
     .heading__header {
       text-align: center;
-      width: 30vw;
+      width: 20vw;
       height: 55px;
       font-weight: 500;
       opacity: 0.7;
@@ -26,8 +27,6 @@
 
 
   .score__result {
-    position: absolute;
-    transform: translate(0, -50%);
     top: 27px;
     right: -1%;
     width: 150px;
