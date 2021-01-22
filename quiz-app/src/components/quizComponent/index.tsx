@@ -2,11 +2,12 @@ import React, { useEffect, useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { IQuizComponent } from '../../types';
 import CustomInput from './CustomInput';
-import {ScoreCtx} from "../../context"
+import { ScoreCtx } from "../../context"
 // import goodAnswearIcon from "../../images/icons/poprawna_odpowiedź_.svg"
 
 import NextButton from '../buttons/NextButton';
 import EndButton from '../buttons/EndButton';
+import { Link } from 'gatsby';
 
 const QuizComponent = ({
   questions,
@@ -15,9 +16,9 @@ const QuizComponent = ({
   const [ activeQuestion, changeActiveQuestion ] = useState(0);
   const [ goodAnswers, setGoodAnswers ] = useState<string[]>([]);
   const [ answers, setAnswers ] = useState<string[] | []>([]);
- 
+
   const { score, setScore } = useContext(ScoreCtx)
-  
+
   const { register, handleSubmit } = useForm();
 
   const handleScore = () => {
@@ -29,23 +30,27 @@ const QuizComponent = ({
   };
 
 
+  console.log(score);
+  console.log(answers);
+  console.log(goodAnswers);
+
+
+
   useEffect(() => {
     setGoodAnswers(questions.map((question) => question.correct.slice(0, 1)));
   }, [ questions ]);
 
   useEffect(() => {
-    if (activeQuestion === questions.length) handleScore();
+    if (activeQuestion === questions.length) {
+      handleScore();
+    }
   }, [ activeQuestion ]);
 
   const onSubmit = (data: any) => {
     const answer = data[ activeQuestion ];
     setAnswers([ ...answers, answer ]);
-  };
-
-  const nextQuestion = () => {
-    handleSubmit(onSubmit)
     changeActiveQuestion(activeQuestion + 1)
-  }
+  };
 
 
   return (
@@ -78,21 +83,23 @@ const QuizComponent = ({
               />
             </div>
 
-            <div style={{marginTop: "50px"}}></div>
-            {(activeQuestion === questions.length -1 )
-              ?
-              <EndButton category={category} />
-              :
-              <NextButton
-                nextQuestion={nextQuestion}
-                category={category}
-                text="NASTĘPNE PYTANIE"
-              />
-            }
+            <div style={{ marginTop: "50px" }}></div>
+
+            <form onSubmit={handleSubmit(onSubmit)}>
+              {(activeQuestion === questions.length - 1)
+                ?
+                <Link to={`/${category}/quiz/result`}>
+                  <input className={`start__button start__button__${category} end__button`} type="submit" value="ZAKOŃCZ" />
+                </Link>
+                :
+                <input className={`start__button start__button__${category} next__button`} type="submit" value="Następne pytanie" />
+              }
+            </form>
           </div>
         </div>
-      )}
-    </div>
+      )
+      }
+    </div >
   );
 };
 

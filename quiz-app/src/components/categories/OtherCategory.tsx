@@ -42,7 +42,7 @@ const OtherCategories = ({currentCategory, category}) => {
   return (
     <div className="other__categories">
         {otherCategories.map((tile) =>
-          <CategoryTile category={category} title={tile.title} icon={tile.icon} size="140px" url={ tile.url }/>)}
+          <CategoryTile key={tile.title} category={category} title={tile.title} icon={tile.icon} size="140px" url={ tile.url }/>)}
       </div>
   )
 }

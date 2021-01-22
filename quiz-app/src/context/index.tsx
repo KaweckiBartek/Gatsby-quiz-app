@@ -11,7 +11,7 @@ export const ScoreProvider = ({children}) => {
     <ScoreCtx.Provider
       value={{
         score,
-        setScore
+        setScore,
     }}
     >
       {children}

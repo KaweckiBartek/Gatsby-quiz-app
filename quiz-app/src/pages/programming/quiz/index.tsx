@@ -4,6 +4,7 @@ import Heading from '../../../components/heading/Heading'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql } from "gatsby"
 import QuizComponent from '../../../components/quizComponent'
+import { ScoreProvider } from '../../../context'
 
 
 const Quiz = (props) => {
@@ -122,16 +123,18 @@ const Quiz = (props) => {
   ]
 
   return (
-    <div className="home">
-      <BackgroundImage
-        fluid={props.data.programmingImage.childImageSharp.fluid}
-        className="full__page__background"
-      >
-        <Header />
-        <Heading category={category} text="WYBRANA KATEGORIA:" />
-        <QuizComponent {...{category, questions}} />
-      </BackgroundImage>
-    </div>
+    <ScoreProvider>
+      <div className="home">
+        <BackgroundImage
+          fluid={props.data.programmingImage.childImageSharp.fluid}
+          className="full__page__background"
+        >
+          <Header />
+          <Heading category={category} text="WYBRANA KATEGORIA:" />
+          <QuizComponent {...{ category, questions }} />
+        </BackgroundImage>
+      </div>
+    </ScoreProvider>
   )
 }
 
