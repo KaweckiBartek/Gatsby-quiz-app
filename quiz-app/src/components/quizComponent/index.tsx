@@ -5,8 +5,6 @@ import CustomInput from './CustomInput';
 import { ScoreCtx } from "../../context"
 // import goodAnswearIcon from "../../images/icons/poprawna_odpowiedź_.svg"
 
-import NextButton from '../buttons/NextButton';
-import EndButton from '../buttons/EndButton';
 import { Link } from 'gatsby';
 
 const QuizComponent = ({
@@ -28,13 +26,6 @@ const QuizComponent = ({
     }
     setScore(score);
   };
-
-
-  console.log(score);
-  console.log(answers);
-  console.log(goodAnswers);
-
-
 
   useEffect(() => {
     setGoodAnswers(questions.map((question) => question.correct.slice(0, 1)));
