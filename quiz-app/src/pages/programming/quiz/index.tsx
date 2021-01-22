@@ -3,10 +3,124 @@ import Header from '../../../components/heading/Header'
 import Heading from '../../../components/heading/Heading'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql } from "gatsby"
+import QuizComponent from '../../../components/quizComponent'
 
 
 const Quiz = (props) => {
   const category = "programming"
+  const questions = [
+    {
+      question: "Lorem ipsum Lorem Sia La La la?",
+      choices: [
+        "A. Lorem Ipsum",
+        "B. Lorem Lorem",
+        "C. Ipsum Ipsum",
+        "D. Ipsum Lorem Lorem",
+        "E. Loret De Mar"
+      ],
+      correct: "B. Lorem Lorem",
+    },
+    {
+      question: "Lorem ipsum Lorem Sia La La la?",
+      choices: [
+        "A. Lorem Ipsum",
+        "B. Lorem Lorem",
+        "C. Ipsum Ipsum",
+        "D. Ipsum Lorem Lorem",
+        "E. Loret De Mar"
+      ],
+      correct: "B. Lorem Lorem",
+    },
+    {
+      question: "Lorem ipsum Lorem Sia La La la?",
+      choices: [
+        "A. Lorem Ipsum",
+        "B. Lorem Lorem",
+        "C. Ipsum Ipsum",
+        "D. Ipsum Lorem Lorem",
+        "E. Loret De Mar"
+      ],
+      correct: "B. Lorem Lorem",
+    },
+    {
+      question: "Lorem ipsum Lorem Sia La La la?",
+      choices: [
+        "A. Lorem Ipsum",
+        "B. Lorem Lorem",
+        "C. Ipsum Ipsum",
+        "D. Ipsum Lorem Lorem",
+        "E. Loret De Mar"
+      ],
+      correct: "B. Lorem Lorem",
+    },
+    {
+      question: "Lorem ipsum Lorem Sia La La la?",
+      choices: [
+        "A. Lorem Ipsum",
+        "B. Lorem Lorem",
+        "C. Ipsum Ipsum",
+        "D. Ipsum Lorem Lorem",
+        "E. Loret De Mar"
+      ],
+      correct: "B. Lorem Lorem",
+    },
+    {
+      question: "Lorem ipsum Lorem Sia La La la?",
+      choices: [
+        "A. Lorem Ipsum",
+        "B. Lorem Lorem",
+        "C. Ipsum Ipsum",
+        "D. Ipsum Lorem Lorem",
+        "E. Loret De Mar"
+      ],
+      correct: "B. Lorem Lorem",
+    },
+    {
+      question: "Lorem ipsum Lorem Sia La La la?",
+      choices: [
+        "A. Lorem Ipsum",
+        "B. Lorem Lorem",
+        "C. Ipsum Ipsum",
+        "D. Ipsum Lorem Lorem",
+        "E. Loret De Mar"
+      ],
+      correct: "B. Lorem Lorem",
+    },
+    {
+      question: "Lorem ipsum Lorem Sia La La la?",
+      choices: [
+        "A. Lorem Ipsum",
+        "B. Lorem Lorem",
+        "C. Ipsum Ipsum",
+        "D. Ipsum Lorem Lorem",
+        "E. Loret De Mar"
+      ],
+      correct: "B. Lorem Lorem",
+    },
+    {
+      question: "Lorem ipsum Lorem Sia La La la?",
+      choices: [
+        "A. Lorem Ipsum",
+        "B. Lorem Lorem",
+        "C. Ipsum Ipsum",
+        "D. Ipsum Lorem Lorem",
+        "E. Loret De Mar"
+      ],
+      correct: "B. Lorem Lorem",
+    },
+    {
+      question: "Lorem ipsum Lorem Sia La La la?",
+      choices: [
+        "A. Lorem Ipsum",
+        "B. Lorem Lorem",
+        "C. Ipsum Ipsum",
+        "D. Ipsum Lorem Lorem",
+        "E. Loret De Mar"
+      ],
+      correct: "B. Lorem Lorem",
+    },
+  ]
+
   return (
     <div className="home">
       <BackgroundImage
@@ -14,7 +128,8 @@ const Quiz = (props) => {
         className="full__page__background"
       >
         <Header />
-        <Heading category={category} text="WYBRANA KATEGORIA:"  />
+        <Heading category={category} text="WYBRANA KATEGORIA:" />
+        <QuizComponent {...{category, questions}} />
       </BackgroundImage>
     </div>
   )

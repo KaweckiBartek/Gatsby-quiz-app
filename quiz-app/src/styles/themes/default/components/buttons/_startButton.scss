@@ -23,6 +23,23 @@
   }
 }
 
+.next__button{
+  cursor: pointer;
+  font-size: 14px;
+  height: 80px;
+  width: 270px;
+  .start__icon{
+    width: 30%;
+  }
+
+}
+
+.end__button{
+  justify-content: center;
+  padding: 0;
+  font-size: 20px;
+}
+
 .result__button__margin {
   margin-top: 100px;
 }

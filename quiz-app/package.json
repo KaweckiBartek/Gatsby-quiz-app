@@ -31,6 +31,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "react-hook-form": "^6.14.2",
     "sass": "^1.32.4",
     "sharp": "^0.27.0"
   },
