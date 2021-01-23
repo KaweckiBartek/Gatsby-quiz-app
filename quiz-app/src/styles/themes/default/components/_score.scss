@@ -1,12 +1,13 @@
-.score {
+.result-score {
   transform: translate(-10vw, 0);
   top: 50%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  .heading__header__wrapper {
+  
+  .heading__wrapper {
     position: relative;
-    .heading__header {
+    .heading {
       text-align: center;
       width: 20vw;
       height: 55px;
@@ -14,7 +15,7 @@
       opacity: 0.7;
     }
 
-    h3.heading__header__text {
+    &__text {
       opacity: 1 !important;
       position: absolute;
       top: 50%;
@@ -26,7 +27,7 @@
   }
 
 
-  .score__result {
+  &__result {
     top: 27px;
     right: -1%;
     width: 150px;
@@ -42,20 +43,20 @@
       font-weight: 400;
     }
   }
-  .score__result__programming{
+  &result__programming{
     background: linear-gradient(to right, #271840, #522e7a);
   }
-  .score__result__history{
+  &__result__history{
     background: linear-gradient(90deg, rgba(11,11,11,1) 9%, rgba(101,88,79,1) 36%, rgba(101,88,79,1) 75%, #c1ad95 100%);
   }
-  .score__result__technology{
+  &__result__technology{
     background: linear-gradient(90deg, rgba(12,15,52,1) 18%, rgba(141,38,139,1) 100%);
   }
-  .score__result__culture{
+  &__result__culture{
     background: linear-gradient(90deg, rgba(104,104,104,1) 0%, rgba(203,203,203,1) 100%);
 
   }
-  .score__result__automotive{
+  &__result__automotive{
     background: linear-gradient(90deg, rgba(11,15,53,1) 0%, rgba(23,19,89,1) 70%, rgba(24,37,139,1) 93%, rgba(19,72,220,1) 100%);
   }
 }

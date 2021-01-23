@@ -3,6 +3,7 @@ import programing from '../../images/icons/programowanie_ikona.svg'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql } from "gatsby"
 import SharedComponents from '../../components';
+import Layout from '../../layouts';
 
 const { Header, Heading, CategoryChosen, MainButton } = SharedComponents;
 
@@ -11,7 +12,7 @@ const Programming = (props) => {
   const kategoria = "PROGRAMOWANIE"
   
   return (
-    <div className="layout">
+    <Layout>
       <BackgroundImage
         fluid={props.data.programmingImage.childImageSharp.fluid}
         className="full-page__background"
@@ -21,7 +22,7 @@ const Programming = (props) => {
         <CategoryChosen icon={programing} title={kategoria} size="200px" />
         <MainButton category={category} url={`/${category}/quiz`} text="ROZPOCZNIJ" />
       </BackgroundImage>
-    </div>
+    </Layout>
   )
 }
 

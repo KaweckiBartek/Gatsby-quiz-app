@@ -61,7 +61,7 @@
     rgba(101, 88, 79, 1) 75%,
     #c1ad95 100%
   );
-  box-shadow: 5px 5px 9px -2px #6c5399;
+  box-shadow: 5px 5px 9px -2px #c1ad95;
 
   &:hover {
     background: linear-gradient(
@@ -73,8 +73,9 @@
 }
 
 .category-tile__culture {
-  border: 1px solid #8f6cd1;
+  border: 1px solid #f8f6fd ;
   background: linear-gradient(90deg, rgba(104,104,104,1) 0%, rgba(203,203,203,1) 100%);
+  box-shadow: 5px 5px 9px -2px rgba(203,203,203,1);
 
   &:hover {
     background: linear-gradient(270deg, rgba(104,104,104,1) 0%, #f8f6fd 100%);

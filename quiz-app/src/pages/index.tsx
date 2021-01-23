@@ -3,12 +3,13 @@ import '../styles/themes/default/theme.scss';
 import BackgroundImage from "gatsby-background-image"
 import { graphql } from "gatsby";
 import SharedComponents from "../components"
+import Layout from '../layouts';
 
 const {Header, Heading, Categories } = SharedComponents;
 
 const Home = (props) => {
   return (
-    <div className="layout">
+    <Layout>
       <BackgroundImage
         fluid={props.data.homeImage.childImageSharp.fluid}
         className="full-page__background"
@@ -17,7 +18,7 @@ const Home = (props) => {
         <Heading text="10 PYTAŃ / 5 KATEGORII" category="programming" />
         <Categories category="programming" />
       </BackgroundImage>
-    </div>
+    </Layout>
   )
 }
 

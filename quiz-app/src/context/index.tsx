@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 export const ScoreCtx = createContext({
   score: 0,
@@ -8,14 +8,11 @@ export const ScoreCtx = createContext({
 export const ScoreProvider = ({children}) => {
   const [ score, setScore ] = useState(0)
   return (
-    <ScoreCtx.Provider
-      value={{
-        score,
-        setScore,
-    }}
-    >
+    <ScoreCtx.Provider value={{score, setScore}}>
       {children}
     </ScoreCtx.Provider>
   )
 }
+
+export const useScore = () => useContext(ScoreCtx)
 

@@ -1,9 +1,9 @@
 import React from 'react'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql } from "gatsby"
-import { ScoreProvider } from '../../../context'
 import SharedComponents from '../../../components'
 import {cultureQuestions as questions} from '../../../data'
+import Layout from '../../../layouts'
 
 const {Header, Heading, QuizComponent} = SharedComponents
 
@@ -11,8 +11,7 @@ const Quiz = (props) => {
   const category = "culture"
   
   return (
-    <ScoreProvider>
-      <div className="layout">
+      <Layout>
         <BackgroundImage
           fluid={props.data.cultureSelect.childImageSharp.fluid}
           className="full-page__background"
@@ -21,8 +20,7 @@ const Quiz = (props) => {
           <Heading category={category} text="WYBRANA KATEGORIA:" />
           <QuizComponent {...{ category, questions }} />
         </BackgroundImage>
-      </div>
-    </ScoreProvider>
+      </Layout>
   )
 }
 

@@ -5,9 +5,10 @@ import automotive from '../../images/icons/motoryzacja_ikona.svg'
 import programing from '../../images/icons/programowanie_ikona.svg'
 import history from '../../images/icons/historia_ikona.svg'
 import CategoryTile from '../categories/CategoryTile'
+import { IOtherCategories } from '../../types'
 
 
-const OtherCategories = ({currentCategory, category}) => {
+const OtherCategories = ({currentCategory, category} : IOtherCategories) => {
   const categories = [
     {
       title: "TECHNOLOGIA",
@@ -39,7 +40,7 @@ const OtherCategories = ({currentCategory, category}) => {
   const otherCategories = categories.filter((el)=> el.title !== currentCategory )
   
   return (
-    <div className="other__categories">
+    <div className="other-categories">
         {otherCategories.map((tile) =>
           <CategoryTile key={tile.title} category={category} title={tile.title} icon={tile.icon} size="140px" url={ tile.url }/>)}
       </div>

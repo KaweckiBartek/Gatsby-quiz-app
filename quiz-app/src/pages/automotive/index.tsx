@@ -3,12 +3,13 @@ import automotive from '../../images/icons/motoryzacja_ikona.svg'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql } from "gatsby"
 import SharedComponents from '../../components';
+import Layout from '../../layouts';
 
 const { Header, Heading, CategoryChosen, MainButton } = SharedComponents;
 
 const Automotive = (props) => {
   return (
-    <div className="layout">
+    <Layout>
       <BackgroundImage
         fluid={props.data.automotiveImage.childImageSharp.fluid}
         className="full-page__background"
@@ -18,7 +19,7 @@ const Automotive = (props) => {
         <CategoryChosen icon={automotive} title="MOTORYZACJA" size="200px" />
         <MainButton category="automotive" url="/automotive/quiz" text="ROZPOCZNIJ"/>
       </BackgroundImage>
-    </div>
+    </Layout>
   )
 }
 

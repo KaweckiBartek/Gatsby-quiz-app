@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { ScoreProvider } from '../../../context'
 import SharedComponents from '../../../components'
 import {technologyQuestions as questions} from '../../../data'
+import Layout from '../../../layouts'
 
 const { Header, Heading, QuizComponent } = SharedComponents;
 
@@ -11,8 +12,7 @@ const Quiz = (props) => {
   const category = "technology"
 
   return (
-    <ScoreProvider>
-    <div className="layout">
+    <Layout>
       <BackgroundImage
         fluid={props.data.technologySelect.childImageSharp.fluid}
         className="full-page__background"
@@ -21,8 +21,7 @@ const Quiz = (props) => {
           <Heading category={category} text="WYBRANA KATEGORIA:" />
           <QuizComponent {...{ category, questions }} />
       </BackgroundImage>
-      </div>
-      </ScoreProvider>
+      </Layout>
   )
 }
 

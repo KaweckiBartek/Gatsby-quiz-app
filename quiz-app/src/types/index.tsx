@@ -1,5 +1,5 @@
 
-export interface ILessonQuestion {
+export interface IQuestion {
   choices: string[];
   correct: string;
   question: string;
@@ -8,14 +8,14 @@ export interface ILessonQuestion {
 export interface ICustomInput {
   value: string;
   activeQuestion: number;
-  questions: ILessonQuestion[];
+  questions: IQuestion[];
   register: any;
   index: number;
   category: string
 }
 
 export interface IQuizComponent {
-  questions: ILessonQuestion[];
+  questions: IQuestion[];
   category: string;
 }
 
@@ -52,3 +52,7 @@ export interface IHeading {
   category: string;
 }
 
+export interface IOtherCategories {
+  currentCategory: string;
+  category: string;
+}

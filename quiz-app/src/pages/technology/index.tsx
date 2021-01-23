@@ -3,6 +3,7 @@ import technology from '../../images/icons/technologia_ikona_.svg'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql } from "gatsby"
 import SharedComponents from '../../components';
+import Layout from '../../layouts';
 
 const { Header, Heading, CategoryChosen, MainButton } = SharedComponents;
 
@@ -11,7 +12,7 @@ const Technology = (props) => {
   const kategoria = "TECHNOLOGIA"
   
   return (
-    <div className="layout">
+    <Layout>
       <BackgroundImage
         fluid={props.data.technologyImage.childImageSharp.fluid}
         className="full-page__background"
@@ -21,7 +22,7 @@ const Technology = (props) => {
         <CategoryChosen icon={technology} title={kategoria} size="200px" />
         <MainButton category={category} url={`/${category}/quiz`} text="ROZPOCZNIJ" />
       </BackgroundImage>
-    </div>
+    </Layout>
   )
 }
 

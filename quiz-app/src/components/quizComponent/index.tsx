@@ -2,7 +2,7 @@ import React, { useEffect, useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { IQuizComponent } from '../../types';
 import CustomInput from './CustomInput';
-import { ScoreCtx } from "../../context"
+import { useScore } from "../../context"
 import { Link } from 'gatsby';
 // import goodAnswearIcon from "../../images/icons/poprawna_odpowiedź_.svg"
 
@@ -15,42 +15,36 @@ const QuizComponent = ({
   const [ goodAnswers, setGoodAnswers ] = useState<string[]>([]);
   const [ answers, setAnswers ] = useState<string[] | []>([]);
   const { register, handleSubmit } = useForm();
-  const { score, setScore } = useContext(ScoreCtx)
-
+  const { score, setScore } = useScore()
+  const answerValue = [ 'A', 'B', 'C', 'D', 'E' ];
+  
   const handleScore = () => {
     let score = 0;
-    // for (let i = 0; i < questions.length; i++) {
-    //   if (answers[ i ] === goodAnswers[ i ]) score += 1;
-    // } 
-    goodAnswers.map((goodAnswer, i) => {
-      (goodAnswer === answers[ i ]) && score++
-    })
+    answers.map((answear, i) => (
+      (answear === goodAnswers[ i ]) && score++
+    ))
     setScore(score);
   };
 
   console.log(score);
   console.log(answers);
-  
-  
-  
-
+  console.log(goodAnswers);
 
   useEffect(() => {
     setGoodAnswers(questions.map((question) => question.correct.slice(0, 1)));
+  }, [ questions ]);
+
+  useEffect(() => {
     if (activeQuestion === questions.length) {
       handleScore();
     }
-  }, [ questions ]);
-
-  // useEffect(() => {
-  // }, [ activeQuestion ]);
+  }, [ activeQuestion ]);
 
   const onSubmit = (data: any) => {
     const answer = data[ activeQuestion ];
     setAnswers([ ...answers, answer ]);
     changeActiveQuestion(activeQuestion + 1)
   };
-
 
   return (
     <div className="quiz-component">
@@ -65,21 +59,9 @@ const QuizComponent = ({
             />
 
             <div className="custom__input__box">
-              <CustomInput
-                {...{ value: 'A', activeQuestion, questions, register, index: 0, category }}
-              />
-              <CustomInput
-                {...{ value: 'B', activeQuestion, questions, register, index: 1, category }}
-              />
-              <CustomInput
-                {...{ value: 'C', activeQuestion, questions, register, index: 2, category }}
-              />
-              <CustomInput
-                {...{ value: 'D', activeQuestion, questions, register, index: 3, category }}
-              />
-              <CustomInput
-                {...{ value: 'E', activeQuestion, questions, register, index: 4, category }}
-              />
+              {answerValue.map((value, index) => (
+                <CustomInput key={value} {...{ value, activeQuestion, questions, register, index, category }} />
+              ))}
             </div>
 
             <form

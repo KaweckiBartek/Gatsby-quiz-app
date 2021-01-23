@@ -3,6 +3,7 @@ import culture from '../../images/icons/kultura_ikona.svg'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql } from "gatsby"
 import SharedComponents from '../../components';
+import Layout from '../../layouts';
 
 const { Header, Heading, CategoryChosen, MainButton, NavButtons  } = SharedComponents;
 
@@ -12,7 +13,7 @@ const History = (props) => {
   const kategoria = "KULTURA"
 
   return (
-    <div className="layout">
+    <Layout>
       <BackgroundImage
         fluid={props.data.cultureImage.childImageSharp.fluid}
         className="full-page__background"
@@ -22,7 +23,7 @@ const History = (props) => {
         <CategoryChosen icon={culture} title={kategoria} size="200px" />
         <MainButton category={category} url={`/${category}/quiz`} text="ROZPOCZNIJ"/>
       </BackgroundImage>
-    </div>
+    </Layout>
   )
 }
 

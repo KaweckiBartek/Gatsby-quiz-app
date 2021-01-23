@@ -2,8 +2,8 @@ import React from 'react'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql } from "gatsby"
 import programing from '../../../../images/icons/programowanie_ikona.svg'
-import { ScoreProvider } from '../../../../context'
 import SharedComponents from '../../../../components'
+import Layout from '../../../../layouts'
 
 const { Header, CategoryChosen, ResultScore, MainButton, OtherCategories } = SharedComponents;
 
@@ -12,8 +12,7 @@ const Result = (props) => {
   const kategoria = "PROGRAMOWANIE"
 
   return (
-    <ScoreProvider>
-      <div className="layout">
+      <Layout>
         <BackgroundImage
           fluid={props.data.programmingQuizResultImage.childImageSharp.fluid}
           className="full-page__background"
@@ -26,8 +25,7 @@ const Result = (props) => {
           </div>
           <OtherCategories category={category} currentCategory={kategoria} />
         </BackgroundImage>
-      </div>
-    </ScoreProvider>
+      </Layout>
   )
 }
 

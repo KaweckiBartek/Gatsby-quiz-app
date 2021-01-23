@@ -10,7 +10,7 @@ import MainButton from './mainButton'
 import NavButtons from './header/NavButtons'
 import QuizComponent from "./quizComponent"
 import CustomInput from "./quizComponent/CustomInput"
-import ResultScore from './result'
+import ResultScore from './resultScore'
 
 export const SharedComponents = {
   Categories,
