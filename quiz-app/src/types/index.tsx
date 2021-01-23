@@ -52,6 +52,10 @@ export interface IHeading {
   category: string;
 }
 
+export interface IResultScore {
+  category: string;
+}
+
 export interface IOtherCategories {
   currentCategory: string;
   category: string;

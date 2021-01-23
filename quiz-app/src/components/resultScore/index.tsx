@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import { ScoreCtx, useScore } from "../../context"
+import { IResultScore } from '../../types'
 
-const ResultScore = ({ category }) => {
+const ResultScore = ({ category }: IResultScore) => {
   const { score } = useScore()
 
   return (
