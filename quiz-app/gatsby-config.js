@@ -5,7 +5,16 @@
  */
 
 module.exports = {
-  /* Your site config here */
+/* Your site config here */
+  siteMetadata: {
+    title: "Gatsby Quiz app",
+    titleTemplate: "%s · The Real Hero",
+    description:
+      "Best Quiz app with amazing optimalization!.",
+    url: "https://gatsby-quiz-app.netlify.app/", // No trailing slash allowed!
+    image: "/images/logo/Q.png", // Path to your image you placed in the 'static' folder
+    twitterUsername: "",
+  },
   plugins: [
     `gatsby-plugin-layout`,
     `gatsby-plugin-sass`,

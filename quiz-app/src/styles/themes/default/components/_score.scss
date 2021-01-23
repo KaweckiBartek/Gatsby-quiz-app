@@ -4,7 +4,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  
+
   .heading__wrapper {
     position: relative;
     .heading {
@@ -26,7 +26,6 @@
     }
   }
 
-
   &__result {
     top: 27px;
     right: -1%;
@@ -37,26 +36,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .score__result__text {
-      color: white;
-      font-size: 40px;
-      font-weight: 400;
+
+    &__programming{
+      background: linear-gradient(to right, #271840, #522e7a);
+    }
+    &__history{
+      background: linear-gradient(90deg, rgba(11,11,11,1) 9%, rgba(101,88,79,1) 36%, rgba(101,88,79,1) 75%, #c1ad95 100%);
+    }
+    &__technology{
+      background: linear-gradient(90deg, rgba(12,15,52,1) 18%, rgba(141,38,139,1) 100%);
+    }
+    &__culture{
+      background: linear-gradient(90deg, rgba(104,104,104,1) 0%, rgba(203,203,203,1) 100%);
+  
+    }
+    &__automotive{
+      background: linear-gradient(90deg, rgba(11,15,53,1) 0%, rgba(23,19,89,1) 70%, rgba(24,37,139,1) 93%, rgba(19,72,220,1) 100%);
     }
   }
-  &result__programming{
-    background: linear-gradient(to right, #271840, #522e7a);
-  }
-  &__result__history{
-    background: linear-gradient(90deg, rgba(11,11,11,1) 9%, rgba(101,88,79,1) 36%, rgba(101,88,79,1) 75%, #c1ad95 100%);
-  }
-  &__result__technology{
-    background: linear-gradient(90deg, rgba(12,15,52,1) 18%, rgba(141,38,139,1) 100%);
-  }
-  &__result__culture{
-    background: linear-gradient(90deg, rgba(104,104,104,1) 0%, rgba(203,203,203,1) 100%);
 
+  &__result__text {
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
   }
-  &__result__automotive{
-    background: linear-gradient(90deg, rgba(11,15,53,1) 0%, rgba(23,19,89,1) 70%, rgba(24,37,139,1) 93%, rgba(19,72,220,1) 100%);
-  }
+  
 }
