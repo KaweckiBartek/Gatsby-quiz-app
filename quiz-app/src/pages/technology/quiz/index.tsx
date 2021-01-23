@@ -12,7 +12,7 @@ const Quiz = (props) => {
 
   return (
     <ScoreProvider>
-    <div className="home">
+    <div className="layout">
       <BackgroundImage
         fluid={props.data.technologySelect.childImageSharp.fluid}
         className="full-page__background"

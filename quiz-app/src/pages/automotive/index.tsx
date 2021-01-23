@@ -8,7 +8,7 @@ const { Header, Heading, CategoryChosen, MainButton } = SharedComponents;
 
 const Automotive = (props) => {
   return (
-    <div className="home">
+    <div className="layout">
       <BackgroundImage
         fluid={props.data.automotiveImage.childImageSharp.fluid}
         className="full-page__background"

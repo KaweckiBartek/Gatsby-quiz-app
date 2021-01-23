@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link} from "gatsby"
+import { ICategoryTile } from '../../types'
 
-const CategoryTile = ({ icon, title, size, url, category }) => {
+const CategoryTile = ({ icon, title, size, url, category }:ICategoryTile) => {
 
   return (
     <Link to={url} >

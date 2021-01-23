@@ -1,4 +1,7 @@
-.quiz__questions {
+.quiz-component {
+  &__form{
+    margin-top: 50px;
+  }
   .question {
     width: 80vw;
     display: flex;
@@ -19,7 +22,7 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-
+      
       .question__answer {
         margin-top: 20px;
         margin-left: 5px;
@@ -53,19 +56,8 @@
 
           &:hover {
             cursor: pointer;
+            transform: scale(1.1);
           }
-
-          // &:checked::after {
-          //   content: "";
-          //   position: absolute;
-          //   width: 15px;
-          //   height: 15px;
-          //   border-radius: 30%;
-          //   top: 50%;
-          //   left: 25%;
-          //   transform: translate(-50%, -50%);
-          //   background-color: tomato;
-          // }
         }
       }
     }

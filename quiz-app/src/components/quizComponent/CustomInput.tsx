@@ -18,7 +18,7 @@ const CustomInput = ({
         value={value}
         ref={register({ required: true })}
       />
-      <div className={`custom__checkbox start__button__${category} `} >
+      <div className={`custom__checkbox main-button__${category} `} >
       {questions[activeQuestion] && questions[activeQuestion].choices[index]}
       </div>
     </label>

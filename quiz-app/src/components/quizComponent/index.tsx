@@ -53,7 +53,7 @@ const QuizComponent = ({
 
 
   return (
-    <div className="quiz__questions">
+    <div className="quiz-component">
       {activeQuestion < questions.length && (
         <div className="wrapper">
           <div className="question">
@@ -82,16 +82,16 @@ const QuizComponent = ({
               />
             </div>
 
-            <div style={{ marginTop: "50px" }}></div>
-
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form
+              className="quiz-component__form"
+              onSubmit={handleSubmit(onSubmit)}>
               {(activeQuestion === questions.length - 1)
                 ?
                 <Link to={`/${category}/quiz/result`}>
-                  <input className={`start__button start__button__${category} end__button`} type="submit" value="ZAKOŃCZ" />
+                  <input className={`main-button main-button__${category} end__button`} type="submit" value="ZAKOŃCZ" />
                 </Link>
                 :
-                <input className={`start__button start__button__${category} next__button`} type="submit" value="Następne pytanie" />
+                <input className={`main-button main-button__${category} next__button`} type="submit" value="Następne pytanie" />
               }
             </form>
           </div>

@@ -1,17 +1,18 @@
 import React from 'react'
+import { ICategoryChosen } from '../../types'
 
-const CategoryChosen = ({ icon, title, size, }) => {
+const CategoryChosen = ({ icon, title, size }: ICategoryChosen) => {
 
   return (
-      <div className="category__chosen"
+      <div className="category-chosen"
         style={{ width: size, height: size }}
       >
-        <img className="category__chosen__icon"
+        <img className="category-chosen__icon"
           src={icon}
           alt="icon" />
         <div>
-          <div className="category__tile__border"></div>
-          <h4 className="category__tile__title">{title}</h4>
+          <div className="category-tile__border"></div>
+          <h4 className="category-tile__title">{title}</h4>
         </div>
       </div>
   )

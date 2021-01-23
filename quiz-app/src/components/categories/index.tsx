@@ -5,9 +5,9 @@ import culture from '../../images/icons/kultura_ikona.svg'
 import automotive from '../../images/icons/motoryzacja_ikona.svg'
 import programing from '../../images/icons/programowanie_ikona.svg'
 import history from '../../images/icons/historia_ikona.svg'
+import { ICategories } from '../../types'
 
-
-const Categories = ({ category }) => {
+const Categories = ({ category }: ICategories) => {
   
   const categories = [
     {

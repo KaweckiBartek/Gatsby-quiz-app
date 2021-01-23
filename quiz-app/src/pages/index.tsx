@@ -8,7 +8,7 @@ const {Header, Heading, Categories } = SharedComponents;
 
 const Home = (props) => {
   return (
-    <div className="home">
+    <div className="layout">
       <BackgroundImage
         fluid={props.data.homeImage.childImageSharp.fluid}
         className="full-page__background"

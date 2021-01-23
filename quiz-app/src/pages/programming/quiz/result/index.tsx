@@ -13,7 +13,7 @@ const Result = (props) => {
 
   return (
     <ScoreProvider>
-      <div className="home">
+      <div className="layout">
         <BackgroundImage
           fluid={props.data.programmingQuizResultImage.childImageSharp.fluid}
           className="full-page__background"

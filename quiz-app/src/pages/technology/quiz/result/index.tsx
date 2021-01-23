@@ -11,7 +11,7 @@ const Result = (props) => {
   const kategoria = "TECHNOLOGIA"
 
   return (
-    <div className="home">
+    <div className="layout">
       <BackgroundImage
         fluid={props.data.technologyQuizResultImage.childImageSharp.fluid}
         className="full-page__background"

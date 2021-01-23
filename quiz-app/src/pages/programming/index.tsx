@@ -11,7 +11,7 @@ const Programming = (props) => {
   const kategoria = "PROGRAMOWANIE"
   
   return (
-    <div className="home">
+    <div className="layout">
       <BackgroundImage
         fluid={props.data.programmingImage.childImageSharp.fluid}
         className="full-page__background"

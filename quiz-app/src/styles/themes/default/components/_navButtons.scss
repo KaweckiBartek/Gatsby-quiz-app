@@ -1,0 +1,16 @@
+.nav-buttons {
+  position: absolute;
+  top: 100px;
+  right: 12%;
+  display: flex;
+
+  &__button {
+    width: 2.25rem;
+    padding: 0.6rem;
+    object-fit: contain;
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

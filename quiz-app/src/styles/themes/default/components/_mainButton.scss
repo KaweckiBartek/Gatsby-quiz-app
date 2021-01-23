@@ -1,0 +1,132 @@
+.main-button {
+  padding: 0 30px 0 40px;
+  margin-top: 50px;
+  width: 300px;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  transition: 0.5s;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__icon {
+    width: 65px;
+  }
+
+  &__text {
+    color: white;
+    font-weight: 400;
+  }
+
+  &__programming {
+    border: 1px solid #7153a7;
+    background-image: linear-gradient(to left, #522f7b, #2b1845 65%);
+    &:hover {
+      background: linear-gradient(to right, #b2368c, #2b1845);
+    }
+  }
+
+  &__technology {
+    border: 1px solid #475396;
+    background: linear-gradient(
+      49deg,
+      rgba(12, 15, 52, 1) 0%,
+      rgba(36, 20, 69, 1) 18%,
+      rgba(69, 25, 90, 1) 43%,
+      rgba(114, 33, 121, 1) 78%,
+      rgba(145, 39, 142, 1) 100%
+    );
+
+    &:hover {
+      background: linear-gradient(
+        243deg,
+        rgba(36, 20, 69, 1) 18%,
+        rgba(69, 25, 90, 1) 43%,
+        rgba(114, 33, 121, 1) 78%,
+        rgba(145, 39, 142, 1) 100%
+      );
+    }
+  }
+
+  &__history {
+    border: 1px solid white;
+    background: linear-gradient(
+      45deg,
+      rgba(11, 11, 11, 1) 9%,
+      rgba(101, 88, 79, 1) 36%,
+      rgba(101, 88, 79, 1) 75%,
+      #c1ad95 100%
+    );
+    
+    &:hover {
+      background: linear-gradient(
+        90deg,
+        rgba(197, 176, 151, 1) 0%,
+        rgba(84, 72, 66, 1) 100%
+      );
+    }
+  }
+
+  &__culture {
+    border: 1px solid white;
+    background: linear-gradient(
+      90deg,
+      rgba(104, 104, 104, 1) 0%,
+      rgba(203, 203, 203, 1) 100%
+    );
+
+    &:hover {
+      background: linear-gradient(
+        270deg,
+        rgba(104, 104, 104, 1) 0%,
+        #f8f6fd 100%
+      );
+    }
+  }
+
+  &__automotive {
+    border: 1px solid #b4b5c2;
+    background: linear-gradient(
+      41deg,
+      rgba(13, 16, 59, 1) 0%,
+      rgba(21, 18, 83, 1) 50%,
+      rgba(26, 25, 111, 1) 79%,
+      rgba(18, 76, 229, 1) 100%
+    );
+    &:hover {
+      background: linear-gradient(
+        90deg,
+        rgba(16, 87, 255, 1) 5%,
+        rgba(52, 64, 171, 1) 71%,
+        rgba(29, 22, 102, 1) 100%
+      );
+    }
+  }
+}
+
+.next__button {
+  cursor: pointer;
+  justify-content: center;
+  color: white !important;
+  font-size: 16px;
+  height: 80px;
+  width: 270px;
+  .start__icon {
+    width: 30%;
+  }
+}
+
+.end__button {
+  justify-content: center;
+  padding: 0;
+  font-size: 20px;
+  color: white !important;
+}
+
+.result__button__margin {
+  margin-top: 100px;
+}

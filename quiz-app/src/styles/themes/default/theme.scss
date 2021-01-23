@@ -8,11 +8,11 @@
 
 @import './components/home';
 @import './components/heading';
+@import './components/header';
 @import './components/logo';
 @import './components/categories';
-@import './components/buttons/backButton';
-@import './components/buttons/closeButton';
-@import './components/buttons/startButton';
+@import './components/navButtons';
+@import './components/mainButton';
 @import './components/backgroundImage';
 @import './components/score';
 @import './components/quizComponent';

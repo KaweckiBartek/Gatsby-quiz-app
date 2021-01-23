@@ -12,7 +12,7 @@ const History = (props) => {
   const kategoria = "HISTORIA"
 
   return (
-    <div className="home">
+    <div className="layout">
       <BackgroundImage
         fluid={props.data.historyImage.childImageSharp.fluid}
         className="full-page__background"
