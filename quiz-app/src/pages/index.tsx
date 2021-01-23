@@ -1,19 +1,19 @@
 import React from 'react'
 import '../styles/themes/default/theme.scss';
-import Header from '../components/heading/Header'
-import Heading from '../components/heading/Heading'
-import Categories from '../components/categories'
 import BackgroundImage from "gatsby-background-image"
-import { graphql } from "gatsby"
+import { graphql } from "gatsby";
+import SharedComponents from "../components"
+
+const {Header, Heading, Categories } = SharedComponents;
 
 const Home = (props) => {
   return (
     <div className="home">
       <BackgroundImage
         fluid={props.data.homeImage.childImageSharp.fluid}
-        className="full__page__background"
+        className="full-page__background"
       >
-        <Header />
+        <Header backButton={false} />
         <Heading text="10 PYTAŃ / 5 KATEGORII" category="programming" />
         <Categories category="programming" />
       </BackgroundImage>

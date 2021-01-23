@@ -7,7 +7,7 @@
   justify-content: center;
 }
 
-.other__categories {
+.other-categories {
   margin-top: 0;
   position: fixed;
   right: 11%;
@@ -20,7 +20,7 @@
   justify-content: center;
 }
 
-.category__tile {
+.category-tile {
   border-radius: 20px;
   margin: 10px;
   display: flex;
@@ -52,7 +52,7 @@
   }
 }
 
-.category__tile__history {
+.category-tile__history {
   border: 1px solid #fff;
   background: linear-gradient(
     45deg,
@@ -72,7 +72,7 @@
   }
 }
 
-.category__tile__culture {
+.category-tile__culture {
   border: 1px solid #8f6cd1;
   background: linear-gradient(90deg, rgba(104,104,104,1) 0%, rgba(203,203,203,1) 100%);
 
@@ -81,7 +81,7 @@
   }
 }
 
-.category__tile__programming {
+.category-tile__programming {
   border: 1px solid #8f6cd1;
   background: linear-gradient(45deg, $c-backgroundDefault, #522f7b);
   box-shadow: 5px 5px 9px -2px #6c5399;
@@ -91,7 +91,7 @@
   }
 }
 
-.category__tile__technology {
+.category-tile__technology {
   border: 1px solid #91278e;
   background: linear-gradient(
     43deg,
@@ -111,7 +111,7 @@
   }
 }
 
-.category__tile__automotive {
+.category-tile__automotive {
   border: 1px solid #8f6cd1;
   background: linear-gradient(
     45deg,
@@ -134,7 +134,7 @@
   }
 }
 
-.category__chosen {
+.category-chosen {
   margin: 15px;
   display: flex;
   flex-direction: column;

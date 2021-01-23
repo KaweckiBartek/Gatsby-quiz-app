@@ -8,7 +8,6 @@ import history from '../../images/icons/historia_ikona.svg'
 
 
 const Categories = ({ category }) => {
-  console.log(category);
   
   const categories = [
     {
@@ -42,7 +41,7 @@ const Categories = ({ category }) => {
   return (
       <div className="categories">
         {categories.map((tile) =>
-          <CategoryTile title={tile.title} icon={tile.icon} size="200px" url={tile.url} category={ category }/>)}
+          <CategoryTile key={tile.title} title={tile.title} icon={tile.icon} size="200px" url={tile.url} category={category} />)}
       </div>
   )
 }

@@ -5,15 +5,15 @@ const CategoryTile = ({ icon, title, size, url, category }) => {
 
   return (
     <Link to={url} >
-      <div className={`category__tile category__tile__${category}`}
+      <div className={`category-tile category-tile__${category}`}
         style={{ width: size, height: size }}
       >
-        <img className="category__tile__icon"
+        <img className="category-tile__icon"
           src={icon}
           alt="icon" />
         <div>
-          <div className="category__tile__border"></div>
-          <h4 className="category__tile__title">{title}</h4>
+          <div className="category-tile__border"></div>
+          <h4 className="category-tile__title">{title}</h4>
         </div>
       </div>
     </Link>

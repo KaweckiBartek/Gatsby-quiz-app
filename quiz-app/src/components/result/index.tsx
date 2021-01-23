@@ -1,8 +1,10 @@
 import React, { useContext } from 'react'
 import {ScoreCtx} from "../../context"
 
-const Score = ({ category }) => {
+const ResultScore = ({ category }) => {
   const { score } = useContext(ScoreCtx)
+
+  console.log(score);
   
   return (
     <div className="score">
@@ -18,4 +20,4 @@ const Score = ({ category }) => {
   )
 }
 
-export default Score
+export default ResultScore

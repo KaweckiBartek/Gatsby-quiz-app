@@ -1,26 +1,22 @@
 import React from 'react'
-import Header from '../../components/heading/Header'
-import Heading from '../../components/heading/Heading'
-import BackButton from "../../components/buttons/BackButton"
-import CategoryChosen from '../../components/categories/CategoryChosen'
 import automotive from '../../images/icons/motoryzacja_ikona.svg'
-import StartButton from '../../components/buttons/StartButton'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql } from "gatsby"
+import SharedComponents from '../../components';
 
+const { Header, Heading, CategoryChosen, MainButton } = SharedComponents;
 
 const Automotive = (props) => {
   return (
     <div className="home">
       <BackgroundImage
         fluid={props.data.automotiveImage.childImageSharp.fluid}
-        className="full__page__background"
+        className="full-page__background"
       >
-        <Header />
-        <BackButton />
+        <Header backButton={true} />
         <Heading category="automotive" text="WYBRANA KATEGORIA:" />
         <CategoryChosen icon={automotive} title="MOTORYZACJA" size="200px" />
-        <StartButton category="automotive" url="/automotive/quiz" text="ROZPOCZNIJ"/>
+        <MainButton category="automotive" url="/automotive/quiz" text="ROZPOCZNIJ"/>
       </BackgroundImage>
     </div>
   )

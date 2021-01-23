@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 import playIcon from '../../images/icons/button_strzałka_plus.svg'
 
-const StartButton = ({ url, text, category }) => {
+const MainButton = ({ url, text, category }) => {
   return (
     <Link to={url}>
       <div className={`start__button start__button__${category}` }>
@@ -13,4 +13,4 @@ const StartButton = ({ url, text, category }) => {
   )
 }
 
-export default StartButton
+export default MainButton

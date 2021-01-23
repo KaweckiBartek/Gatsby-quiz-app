@@ -1,12 +1,10 @@
 import React from 'react'
-import Header from '../../components/heading/Header'
-import Heading from '../../components/heading/Heading'
-import BackButton from "../../components/buttons/BackButton"
-import CategoryChosen from '../../components/categories/CategoryChosen'
 import culture from '../../images/icons/kultura_ikona.svg'
-import StartButton from '../../components/buttons/StartButton'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql } from "gatsby"
+import SharedComponents from '../../components';
+
+const { Header, Heading, CategoryChosen, MainButton, NavButtons  } = SharedComponents;
 
 
 const History = (props) => {
@@ -17,13 +15,12 @@ const History = (props) => {
     <div className="home">
       <BackgroundImage
         fluid={props.data.cultureImage.childImageSharp.fluid}
-        className="full__page__background"
+        className="full-page__background"
       >
-        <Header />
-        <BackButton />
+        <Header backButton={ true}/>
         <Heading category={category} text="WYBRANA KATEGORIA:"/>
         <CategoryChosen icon={culture} title={kategoria} size="200px" />
-        <StartButton category={category} url={`/${category}/quiz`} text="ROZPOCZNIJ"/>
+        <MainButton category={category} url={`/${category}/quiz`} text="ROZPOCZNIJ"/>
       </BackgroundImage>
     </div>
   )

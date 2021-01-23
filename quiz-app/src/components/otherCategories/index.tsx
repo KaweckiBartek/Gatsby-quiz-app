@@ -1,11 +1,12 @@
 import React from 'react'
-import CategoryTile from './CategoryTile'
+import SharedComponents from '../../components'
 import technology from '../../images/icons/technologia_ikona_.svg'
 import culture from '../../images/icons/kultura_ikona.svg'
 import automotive from '../../images/icons/motoryzacja_ikona.svg'
 import programing from '../../images/icons/programowanie_ikona.svg'
 import history from '../../images/icons/historia_ikona.svg'
 
+const { CategoryTile } = SharedComponents;
 
 const OtherCategories = ({currentCategory, category}) => {
   const categories = [
@@ -33,7 +34,6 @@ const OtherCategories = ({currentCategory, category}) => {
       title: "HISTORIA",
       icon: history,
       url: "/history",
-
     },
   ]
 

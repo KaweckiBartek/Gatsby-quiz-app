@@ -3,39 +3,47 @@ import { useForm } from 'react-hook-form';
 import { IQuizComponent } from '../../types';
 import CustomInput from './CustomInput';
 import { ScoreCtx } from "../../context"
+import { Link } from 'gatsby';
 // import goodAnswearIcon from "../../images/icons/poprawna_odpowiedź_.svg"
 
-import { Link } from 'gatsby';
 
 const QuizComponent = ({
   questions,
   category,
 }: IQuizComponent) => {
-  const [ activeQuestion, changeActiveQuestion ] = useState(0);
+  const [ activeQuestion, changeActiveQuestion ] = useState<number>(0);
   const [ goodAnswers, setGoodAnswers ] = useState<string[]>([]);
   const [ answers, setAnswers ] = useState<string[] | []>([]);
-
-  const { score, setScore } = useContext(ScoreCtx)
-
   const { register, handleSubmit } = useForm();
+  const { score, setScore } = useContext(ScoreCtx)
 
   const handleScore = () => {
     let score = 0;
-    for (let i = 0; i < questions.length; i++) {
-      if (answers[ i ] === goodAnswers[ i ]) score += 1;
-    }
+    // for (let i = 0; i < questions.length; i++) {
+    //   if (answers[ i ] === goodAnswers[ i ]) score += 1;
+    // } 
+    goodAnswers.map((goodAnswer, i) => {
+      (goodAnswer === answers[ i ]) && score++
+    })
     setScore(score);
   };
 
-  useEffect(() => {
-    setGoodAnswers(questions.map((question) => question.correct.slice(0, 1)));
-  }, [ questions ]);
+  console.log(score);
+  console.log(answers);
+  
+  
+  
+
 
   useEffect(() => {
+    setGoodAnswers(questions.map((question) => question.correct.slice(0, 1)));
     if (activeQuestion === questions.length) {
       handleScore();
     }
-  }, [ activeQuestion ]);
+  }, [ questions ]);
+
+  // useEffect(() => {
+  // }, [ activeQuestion ]);
 
   const onSubmit = (data: any) => {
     const answer = data[ activeQuestion ];
