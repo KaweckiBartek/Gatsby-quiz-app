@@ -1,7 +1,6 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import { ScoreCtx } from '../context'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -15,14 +14,10 @@ const Layout = ({ children }) => (
       }
     `}
     render={ data => (
-      <ScoreCtx.Consumer>
-        {context => (
             <div className="layout">
               { children }
             </div>
         ) }
-      </ScoreCtx.Consumer>
-    ) }
   />
 )
 

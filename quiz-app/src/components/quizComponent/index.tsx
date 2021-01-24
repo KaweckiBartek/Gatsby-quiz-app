@@ -6,6 +6,18 @@ import { useScore } from "../../context"
 import { Link } from 'gatsby';
 // import goodAnswearIcon from "../../images/icons/poprawna_odpowiedź_.svg"
 
+export function useStickyState(defaultValue, key) {
+  const [ value, setValue ] = React.useState(() => {
+    const stickyValue = window.localStorage.getItem(key);
+    return stickyValue !== null
+      ? JSON.parse(stickyValue)
+      : defaultValue;
+  });
+  React.useEffect(() => {
+    window.localStorage.setItem(key, JSON.stringify(value));
+  }, [ key, value ]);
+  return [ value, setValue ];
+}
 
 const QuizComponent = ({
   questions,
@@ -15,9 +27,10 @@ const QuizComponent = ({
   const [ goodAnswers, setGoodAnswers ] = useState<string[]>([]);
   const [ answers, setAnswers ] = useState<string[] | []>([]);
   const { register, handleSubmit } = useForm();
-  const { score, setScore } = useScore()
+  const [ score, setScore ] = useStickyState(0, "score");
+
   const answerValue = [ 'A', 'B', 'C', 'D', 'E' ];
-  
+
   const handleScore = () => {
     let score = 0;
     answers.map((answear, i) => (
@@ -67,19 +80,23 @@ const QuizComponent = ({
             <form
               className="quiz-component__form"
               onSubmit={handleSubmit(onSubmit)}>
-              {(activeQuestion === questions.length - 1)
+              {/* {(activeQuestion === questions.length - 1)
                 ?
                 <Link to={`/${category}/quiz/result`}>
                   <input className={`main-button main-button__${category} end__button`} type="submit" value="ZAKOŃCZ" />
                 </Link>
                 :
                 <input className={`main-button main-button__${category} next__button`} type="submit" value="Następne pytanie" />
-              }
+              } */}
+              <input className={`main-button main-button__${category} next__button`} type="submit" value="Następne pytanie" />
             </form>
           </div>
         </div>
       )
       }
+      <Link to={`/${category}/quiz/result`}>
+        <input className={`main-button main-button__${category} end__button`} type="submit" value="ZAKOŃCZ" />
+      </Link>
     </div >
   );
 };
