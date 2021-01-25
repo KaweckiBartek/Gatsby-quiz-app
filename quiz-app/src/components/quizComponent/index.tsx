@@ -3,20 +3,8 @@ import { useForm } from 'react-hook-form';
 import { IQuizComponent } from '../../types';
 import CustomInput from './CustomInput';
 import { Link } from 'gatsby';
+import { useStickyState } from '../../customHooks';
 // import goodAnswearIcon from "../../images/icons/poprawna_odpowiedź_.svg"
-
-export function useStickyState(defaultValue, key) {
-  const [ value, setValue ] = React.useState(() => {
-    const stickyValue = typeof window !== 'undefined' && window.localStorage.getItem(key);
-    return stickyValue !== null
-      ? JSON.parse(stickyValue)
-      : defaultValue;
-  });
-  React.useEffect(() => {
-    window.localStorage.setItem(key, JSON.stringify(value));
-  }, [ key, value ]);
-  return [ value, setValue ];
-}
 
 const QuizComponent = ({
   questions,
@@ -57,7 +45,7 @@ const QuizComponent = ({
 
   return (
     <div className="quiz-component">
-      {activeQuestion < questions.length && (
+      {activeQuestion < questions.length ? (
         <div className="wrapper">
           <div className="question">
             <div
@@ -82,10 +70,10 @@ const QuizComponent = ({
           </div>
         </div>
       )
-      }
-      <Link to={`/${category}/quiz/result`}>
-        <input className={`main-button main-button__${category} end__button`} type="submit" value="ZAKOŃCZ" />
-      </Link>
+        :
+        <Link to={`/${category}/quiz/result`}>
+          <input className={`main-button main-button__${category} end__button`} type="submit" value="ZAKOŃCZ" />
+        </Link>}
     </div >
   );
 };

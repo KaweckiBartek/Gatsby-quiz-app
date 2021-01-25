@@ -1,5 +1,6 @@
 import React from 'react'
-import { useStickyState } from '../quizComponent';
+import { useStickyState } from '../../customHooks';
+
 
 const ResultScore = ({ category }) => {
   const [score] = useStickyState(0, `${category}Score`);
