@@ -2,7 +2,7 @@ import React from 'react'
 import { useStickyState } from '../quizComponent';
 
 const ResultScore = ({ category }) => {
-  const [score, setScore] = useStickyState(0, "score");
+  const [score] = useStickyState(0, `${category}Score`);
   return (
     <div className="result-score">
       <div className="heading__wrapper">
