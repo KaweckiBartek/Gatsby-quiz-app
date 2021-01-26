@@ -3,7 +3,7 @@ import QUIZ from '../../images/logo/quiz.png'
 
 const QUIZLogo = () => {
   return (
-    <img src={QUIZ} className="quiz-logo" />
+    <img src={QUIZ} alt="logo" className="quiz-logo" />
   )
 }
 

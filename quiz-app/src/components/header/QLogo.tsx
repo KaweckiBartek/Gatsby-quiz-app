@@ -5,7 +5,7 @@ import Q from '../../images/logo/Q.png'
 const QLogo = () => {
   return (
     <Link to="/">
-      <img src={Q} className="q-logo" />
+      <img src={Q} alt="logo" className="q-logo" />
     </Link>
   )
 }

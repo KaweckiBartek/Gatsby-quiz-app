@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import automotive from '../../../../images/icons/motoryzacja_ikona.svg'
 import SharedComponents from '../../../../components'
 import Layout from '../../../../layouts'
+import { Helmet } from "react-helmet"
 
 const { Header, CategoryChosen, ResultScore, MainButton, OtherCategories } = SharedComponents;
 
@@ -13,7 +14,11 @@ const Result = (props) => {
 
   return (
     <Layout>
-    
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Result - Gatsby Quiz App</title>
+        <link rel="canonical" href="https://gatsby-quiz-app.netlify.app/" />
+      </Helmet>
       <BackgroundImage
         fluid={props.data.automotiveQuizResultImage.childImageSharp.fluid}
         className="full-page__background"
@@ -22,9 +27,9 @@ const Result = (props) => {
         <CategoryChosen icon={automotive} title={kategoria} size="200px" />
         <ResultScore category={category} />
         <div className="result__button__margin">
-        <MainButton category={category} text="POWTÓRZ QUIZ" url={`/${category}`} />
+          <MainButton category={category} text="POWTÓRZ QUIZ" url={`/${category}`} />
         </div>
-        <OtherCategories category={category} currentCategory={ kategoria }/>
+        <OtherCategories category={category} currentCategory={kategoria} />
       </BackgroundImage>
     </Layout>
   )
