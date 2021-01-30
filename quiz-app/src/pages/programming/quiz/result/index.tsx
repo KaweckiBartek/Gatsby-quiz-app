@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import programing from '../../../../images/icons/programowanie_ikona.svg'
 import SharedComponents from '../../../../components'
 import Layout from '../../../../layouts'
+import { Helmet } from "react-helmet"
 
 const { Header, CategoryChosen, ResultScore, MainButton, OtherCategories } = SharedComponents;
 
@@ -12,7 +13,12 @@ const Result = (props) => {
   const kategoria = "PROGRAMOWANIE"
 
   return (
-      <Layout>
+    <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Result - Gatsby Quiz App</title>
+        <link rel="canonical" href="https://gatsby-quiz-app.netlify.app/" />
+      </Helmet>
         <BackgroundImage
           fluid={props.data.programmingQuizResultImage.childImageSharp.fluid}
           className="full-page__background"

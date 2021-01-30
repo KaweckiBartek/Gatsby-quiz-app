@@ -4,12 +4,18 @@ import BackgroundImage from "gatsby-background-image"
 import { graphql } from "gatsby";
 import SharedComponents from "../components"
 import Layout from '../layouts';
+import { Helmet } from "react-helmet"
 
 const {Header, Heading, Categories } = SharedComponents;
 
 const Home = (props) => {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Gatsby Quiz App</title>
+        <link rel="canonical" href="https://gatsby-quiz-app.netlify.app/" />
+      </Helmet>
       <BackgroundImage
         fluid={props.data.homeImage.childImageSharp.fluid}
         className="full-page__background"

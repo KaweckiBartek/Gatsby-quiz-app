@@ -1,10 +1,9 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { IQuizComponent } from '../../types';
 import CustomInput from './CustomInput';
-import { useScore } from "../../context"
 import { Link } from 'gatsby';
-// import goodAnswearIcon from "../../images/icons/poprawna_odpowiedź_.svg"
+import { useStickyState } from '../../customHooks';
 
 
 const QuizComponent = ({
@@ -15,9 +14,10 @@ const QuizComponent = ({
   const [ goodAnswers, setGoodAnswers ] = useState<string[]>([]);
   const [ answers, setAnswers ] = useState<string[] | []>([]);
   const { register, handleSubmit } = useForm();
-  const { score, setScore } = useScore()
+  const [ score, setScore ] = useStickyState(0, `${category}Score`);
+
   const answerValue = [ 'A', 'B', 'C', 'D', 'E' ];
-  
+
   const handleScore = () => {
     let score = 0;
     answers.map((answear, i) => (
@@ -25,10 +25,6 @@ const QuizComponent = ({
     ))
     setScore(score);
   };
-
-  console.log(score);
-  console.log(answers);
-  console.log(goodAnswers);
 
   useEffect(() => {
     setGoodAnswers(questions.map((question) => question.correct.slice(0, 1)));
@@ -48,7 +44,7 @@ const QuizComponent = ({
 
   return (
     <div className="quiz-component">
-      {activeQuestion < questions.length && (
+      {activeQuestion < questions.length ? (
         <div className="wrapper">
           <div className="question">
             <div
@@ -67,19 +63,16 @@ const QuizComponent = ({
             <form
               className="quiz-component__form"
               onSubmit={handleSubmit(onSubmit)}>
-              {(activeQuestion === questions.length - 1)
-                ?
-                <Link to={`/${category}/quiz/result`}>
-                  <input className={`main-button main-button__${category} end__button`} type="submit" value="ZAKOŃCZ" />
-                </Link>
-                :
-                <input className={`main-button main-button__${category} next__button`} type="submit" value="Następne pytanie" />
-              }
+
+              <input className={`main-button main-button__${category} next__button`} type="submit" value="Następne pytanie" />
             </form>
           </div>
         </div>
       )
-      }
+        :
+        <Link to={`/${category}/quiz/result`}>
+          <input className={`main-button main-button__${category} end__button`} type="submit" value="ZAKOŃCZ" />
+        </Link>}
     </div >
   );
 };

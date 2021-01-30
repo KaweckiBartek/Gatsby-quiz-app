@@ -19,6 +19,7 @@
   width: 200px;
   align-items: center;
   justify-content: center;
+
 }
 
 .category-tile {
@@ -165,3 +166,12 @@
     color: white;
   }
 }
+
+@media screen and (max-width: 1024px ){
+  .other-categories{
+    margin-top: 60px;
+    position: static;
+    flex-direction: row;
+    width: 100%;
+  }
+} 
