@@ -11,7 +11,9 @@ export interface ICustomInput {
   questions: IQuestion[];
   register: any;
   index: number;
-  category: string
+  category: string;
+  answerChecked: string;
+  handleAnswerChange: (e: React.ChangeEvent<HTMLInputElement>) => void 
 }
 
 export interface IQuizComponent {

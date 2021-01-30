@@ -15,6 +15,7 @@ const QuizComponent = ({
   const [ answers, setAnswers ] = useState<string[] | []>([]);
   const { register, handleSubmit } = useForm();
   const [ score, setScore ] = useStickyState(0, `${category}Score`);
+  const [answerChecked, setAnswerChecked] = useState('')
 
   const answerValue = [ 'A', 'B', 'C', 'D', 'E' ];
 
@@ -39,8 +40,13 @@ const QuizComponent = ({
   const onSubmit = (data: any) => {
     const answer = data[ activeQuestion ];
     setAnswers([ ...answers, answer ]);
-    changeActiveQuestion(activeQuestion + 1)
+    changeActiveQuestion(activeQuestion + 1);
+    setAnswerChecked('');
   };
+
+  const handleAnswerChange = (e) => {
+    setAnswerChecked(e.target.value)
+  }
 
   return (
     <div className="quiz-component">
@@ -56,7 +62,7 @@ const QuizComponent = ({
 
             <div className="custom__input__box">
               {answerValue.map((value, index) => (
-                <CustomInput key={value} {...{ value, activeQuestion, questions, register, index, category }} />
+                <CustomInput key={value} {...{ value, activeQuestion, questions, register, index, category, answerChecked, handleAnswerChange}} />
               ))}
             </div>
 

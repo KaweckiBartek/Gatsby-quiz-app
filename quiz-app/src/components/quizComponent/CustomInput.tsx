@@ -1,6 +1,6 @@
 import React from 'react';
 import { ICustomInput } from '../../types';
-import goodAnswearIcon from '../../images/icons/poprawna_odpowiedź_.svg'
+// import goodAnswearIcon from '../../images/icons/poprawna_odpowiedź_.svg'
 
 const CustomInput = ({
   value,
@@ -8,7 +8,9 @@ const CustomInput = ({
   questions,
   register,
   index,
-  category
+  category,
+  answerChecked,
+  handleAnswerChange,
 }: ICustomInput) => {
   return (
     <label className="question__answer">
@@ -16,9 +18,13 @@ const CustomInput = ({
         type="radio"
         name={`${activeQuestion}`}
         value={value}
+        checked={answerChecked === `${value}`}
         ref={register({ required: true })}
+        onChange={handleAnswerChange}
       />
-      <div className={`custom__checkbox main-button__${category} `} >
+      <div
+        className={`custom__checkbox main-button__${category} `}
+      >
       {questions[activeQuestion] && questions[activeQuestion].choices[index]}
       </div>
     </label>
