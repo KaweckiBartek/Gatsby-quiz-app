@@ -6,11 +6,11 @@ import { IHeader } from '../../types';
 
 const Header = ({backButton}: IHeader) => {
   return (
-    <div className="header">
+    <header className="header">
       <QLogo />
       <QUIZLogo />
       <NavButtons {...{backButton}}/>
-    </div>
+    </header>
   )
 }
 
