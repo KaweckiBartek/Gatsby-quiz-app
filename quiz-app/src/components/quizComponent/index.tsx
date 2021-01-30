@@ -4,7 +4,7 @@ import { IQuizComponent } from '../../types';
 import CustomInput from './CustomInput';
 import { Link } from 'gatsby';
 import { useStickyState } from '../../customHooks';
-// import goodAnswearIcon from "../../images/icons/poprawna_odpowiedź_.svg"
+
 
 const QuizComponent = ({
   questions,
@@ -25,7 +25,6 @@ const QuizComponent = ({
     ))
     setScore(score);
   };
-
 
   useEffect(() => {
     setGoodAnswers(questions.map((question) => question.correct.slice(0, 1)));

@@ -26,8 +26,6 @@ export const SharedComponents = {
   QuizComponent,
   CustomInput,
   ResultScore,
-
-
 }
 
 export default SharedComponents;
