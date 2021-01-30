@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-import React, { useContext } from 'react'
-import { ScoreCtx, useScore } from "../../context"
-import { IResultScore } from '../../types'
-
-const ResultScore = ({ category }: IResultScore) => {
-  const { score } = useScore()
-=======
 import React from 'react'
 import { useStickyState } from '../../customHooks';
 
->>>>>>> dev
 
 const ResultScore = ({ category }) => {
   const [score] = useStickyState(0, `${category}Score`);
