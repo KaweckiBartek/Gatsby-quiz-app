@@ -13,7 +13,9 @@ export interface ICustomInput {
   index: number;
   category: string;
   answerChecked: string;
-  handleAnswerChange: (e: React.ChangeEvent<HTMLInputElement>) => void 
+  handleAnswerChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  showGoodAnswer: boolean;
+  isDisabled: boolean;
 }
 
 export interface IQuizComponent {
